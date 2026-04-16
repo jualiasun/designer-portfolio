@@ -13,5 +13,12 @@
   },
   "dependencies": {
     "astro": "^6.1.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "eslint": "^10.2.0",
+    "eslint-plugin-astro": "^1.7.0",
+    "tailwindcss": "^4.2.2"
   }
 }
