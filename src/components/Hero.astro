@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import crane from '../assets/intro/crane.png'
+import craneHands from '../assets/intro/crane-hands.png'
 import avatar from '../assets/intro/avatar.png'
 import clsx from 'clsx'
 ---
@@ -8,33 +9,50 @@ import clsx from 'clsx'
 <section
   class={clsx(
     'bg-deep-black relative overflow-hidden text-deep-black',
-    'min-h-screen pt-[calc(var(--header-height)+24px)] flex flex-col justify-end',
+    'min-h-screen 2xl:min-h-[122vh] pt-[calc(var(--header-height)+24px)] flex flex-col justify-end',
   )}
 >
   <Image
     src={crane}
     alt=""
-    class="absolute top-[calc(var(--header-height)+24px)] w-[110%] max-w-none left-1/2 -translate-x-1/2"
+    class="md:hidden absolute top-[calc(var(--header-height)+24px)] w-[110%] max-w-none left-1/2 -translate-x-1/2"
+  />
+  <Image
+    src={craneHands}
+    alt=""
+    class="max-md:hidden absolute top-[calc(var(--header-height)+24px)] w-[calc(100%+220px)] max-w-none left-1/2 -translate-x-1/2 md:z-20"
   />
   <div
     class={clsx(
+      'relative z-10',
       'bg-[url("/images/paper-bg.png")] bg-position-[bottom_-45px_center] bg-no-repeat bg-size-[auto_110%]',
       'flex flex-col justify-end px-4 gap-y-8 py-13',
-      'relative z-10',
+      'md:bg-size-[auto_100%]',
+      'lg:bg-position-[bottom_-45px_left_-10px] lg:bg-size-[auto_90%] lg:gap-y-0',
     )}
   >
-    <Image src={avatar} alt="" class="w-25 rotate-2 self-end mr-6" />
-    <div class="flex flex-col gap-y-8">
+    <Image
+      src={avatar}
+      alt=""
+      class="w-25 md:w-30 lg:w-40 rotate-2 self-end mr-6 lg:mr-50"
+    />
+    <div class="flex flex-col md:flex-row-reverse md:items-center gap-8">
       <div class="flex flex-col gap-y-5">
-        <h3 class="font-bold text-lg">Shaping Things That Matter</h3>
-        <p class="text-sm">
+        <h3 class="font-bold text-lg 2xl:text-2xl">
+          Shaping Things That Matter
+        </h3>
+        <p class="text-sm 2xl:text-xl">
           I'm not into safe design. I focus on strong concepts, visual impact,
           and work that stands out for the right reasons. I mix illustration,
           typography, and bold compositions to shape ideas, with experience
           across SaaS and tech where clarity still matters.
         </p>
       </div>
-      <h1 class="text-[60px] font-boldonse uppercase">My work</h1>
+      <h1
+        class="text-[60px] md:text-[80px] lg:text-[110px] 2xl:text-[180px] font-boldonse uppercase whitespace-nowrap"
+      >
+        My work
+      </h1>
     </div>
   </div>
 </section>
