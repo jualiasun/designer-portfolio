@@ -3,4 +3,12 @@
 @theme inline {
   --font-aktiv-grotesk: var(--font-aktiv-grotesk);
   --font-boldonse: var(--font-boldonse);
+
+  --color-deep-black: #150e1c;
+  --color-mystery-purple: #dcb8ff;
+  --color-paper-white: #f3f0eb;
+}
+
+:root {
+  --header-height: 60px;
 }
