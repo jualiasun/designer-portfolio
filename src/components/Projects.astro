@@ -23,6 +23,7 @@ const projects = [
     title: 'A community for B2B marketers',
     align: 'left' as const,
     mt: '',
+    speed: -0.1,
   },
   {
     image: saastock,
@@ -31,6 +32,7 @@ const projects = [
     title: 'A conference for SaaS founders and leaders',
     align: 'right' as const,
     mt: 'md:mt-51 lg:mt-[288px] xl:mt-[270px]',
+    speed: 0.1,
   },
   {
     image: rejected,
@@ -39,6 +41,7 @@ const projects = [
     title: 'A European cybersecurity conference concept',
     align: 'indented-left' as const,
     mt: 'md:mt-10 lg:mt-[60px] xl:mt-[70px]',
+    speed: -0.05,
   },
   {
     image: mixmax,
@@ -47,6 +50,7 @@ const projects = [
     title: 'An AI-powered sales platform',
     align: 'indented-right' as const,
     mt: 'md:mt-46 lg:mt-[260px] xl:mt-[466px]',
+    speed: 0.2,
   },
   {
     image: zoca,
@@ -55,6 +59,7 @@ const projects = [
     title: 'An AI-powered beauty & wellness marketing startup',
     align: 'left' as const,
     mt: 'md:mt-48 lg:mt-[348px] xl:mt-[466px]',
+    speed: -0.15,
   },
   {
     image: noboringdesign,
@@ -63,6 +68,7 @@ const projects = [
     title: 'Design work for No Boring Design',
     align: 'right' as const,
     mt: 'md:mt-25 lg:mt-[150px] xl:mt-[120px]',
+    speed: 0,
   },
   {
     image: digitalAds,
@@ -71,6 +77,7 @@ const projects = [
     title: 'A collection of my favourite ad designs',
     align: 'indented-left' as const,
     mt: 'md:mt-25 lg:mt-[150px] xl:mt-[202px]',
+    speed: -0.12,
   },
   {
     image: alloFiber,
@@ -79,6 +86,7 @@ const projects = [
     title: 'A TV advertisement for a US fiber internet provider',
     align: 'right' as const,
     mt: 'md:mt-5 xl:mt-[80px]',
+    speed: 0.1,
   },
   {
     image: bravery,
@@ -87,6 +95,7 @@ const projects = [
     title: 'An illustration series celebrating Ukrainian bravery',
     align: 'left' as const,
     mt: 'md:mt-41 lg:mt-[60px] xl:mt-[270px]',
+    speed: 0,
   },
   {
     image: warBelonging,
@@ -95,6 +104,7 @@ const projects = [
     title: 'A personal illustration series on war and belonging',
     align: 'indented-right' as const,
     mt: 'md:mt-60 lg:mt-[184px] xl:mt-[370px]',
+    speed: 0.2,
   },
   {
     image: postcards,
@@ -103,6 +113,7 @@ const projects = [
     title: 'A postcard collection of Ukrainian cities',
     align: 'left' as const,
     mt: 'md:mt-5 xl:mt-[70px]',
+    speed: -0.12,
   },
   {
     image: scarf,
@@ -111,6 +122,7 @@ const projects = [
     title: 'A fundraising scarf for a friend in the army',
     align: 'right' as const,
     mt: 'md:mt-41 lg:mt-[224px] xl:mt-[120px]',
+    speed: 0.3,
   },
 ]
 
@@ -133,35 +145,79 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
     }
   </div>
 
-  <!-- Desktop: 2-column staggered layout -->
-  <div class="hidden md:grid md:grid-cols-2">
+  <!-- Desktop: 2-column staggered layout with parallax -->
+  <div class="hidden md:grid md:grid-cols-2" id="projects-grid">
     <div class="flex flex-col">
       {
         leftColumn.map((project) => (
-          <ProjectCard
-            image={project.image}
-            category={project.category}
-            client={project.client}
-            title={project.title}
-            align={project.align}
-            mt={project.mt}
-          />
+          <div class="parallax-card" data-speed={project.speed}>
+            <ProjectCard
+              image={project.image}
+              category={project.category}
+              client={project.client}
+              title={project.title}
+              align={project.align}
+              mt={project.mt}
+            />
+          </div>
         ))
       }
     </div>
     <div class="flex flex-col">
       {
         rightColumn.map((project) => (
-          <ProjectCard
-            image={project.image}
-            category={project.category}
-            client={project.client}
-            title={project.title}
-            align={project.align}
-            mt={project.mt}
-          />
+          <div class="parallax-card" data-speed={project.speed}>
+            <ProjectCard
+              image={project.image}
+              category={project.category}
+              client={project.client}
+              title={project.title}
+              align={project.align}
+              mt={project.mt}
+            />
+          </div>
         ))
       }
     </div>
   </div>
 </section>
+
+<script>
+  const parallaxCards = document.querySelectorAll('.parallax-card')
+
+  if (parallaxCards.length > 0) {
+    let rafId: number | null = null
+
+    const updateParallax = () => {
+      const windowHeight = window.innerHeight
+
+      parallaxCards.forEach((card) => {
+        const cardEl = card as HTMLElement
+        const rect = cardEl.getBoundingClientRect()
+        const speed = parseFloat(cardEl.getAttribute('data-speed') || '0.03')
+
+        // Check if card is in viewport (with some buffer)
+        const isInView = rect.top < windowHeight + 200 && rect.bottom > -200
+
+        if (isInView) {
+          // Calculate parallax based on card's position relative to viewport center
+          const viewportProgress =
+            (windowHeight - rect.top) / (windowHeight + rect.height)
+          const parallaxOffset = viewportProgress * rect.height * speed * 2
+          cardEl.style.transform = `translateY(${-parallaxOffset}px)`
+        }
+      })
+
+      rafId = null
+    }
+
+    const onScroll = () => {
+      if (rafId === null) {
+        rafId = requestAnimationFrame(updateParallax)
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    updateParallax()
+  }
+</script>
