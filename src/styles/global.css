@@ -8,8 +8,16 @@
   --color-mystery-purple: #dcb8ff;
   --color-paper-white: #f3f0eb;
   --color-bold-green: #9fff63;
+
+  --breakpoint-xs: 21rem;
 }
 
 :root {
   --header-height: 60px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 84px;
+  }
 }

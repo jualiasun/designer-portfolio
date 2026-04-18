@@ -20,7 +20,7 @@ const projects = [
     image: exitfive,
     category: 'visual identity',
     client: 'Exitfive',
-    title: 'A community for B2B marketers',
+    title: `A community for\nB2B marketers`,
     align: 'left' as const,
     mt: '',
     speed: -0.1,
@@ -150,32 +150,32 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
     <div class="flex flex-col">
       {
         leftColumn.map((project) => (
-          <div class="parallax-card" data-speed={project.speed}>
-            <ProjectCard
-              image={project.image}
-              category={project.category}
-              client={project.client}
-              title={project.title}
-              align={project.align}
-              mt={project.mt}
-            />
-          </div>
+          <ProjectCard
+            image={project.image}
+            category={project.category}
+            client={project.client}
+            title={project.title}
+            align={project.align}
+            mt={project.mt}
+            class="parallax-card"
+            data-speed={project.speed}
+          />
         ))
       }
     </div>
     <div class="flex flex-col">
       {
         rightColumn.map((project) => (
-          <div class="parallax-card" data-speed={project.speed}>
-            <ProjectCard
-              image={project.image}
-              category={project.category}
-              client={project.client}
-              title={project.title}
-              align={project.align}
-              mt={project.mt}
-            />
-          </div>
+          <ProjectCard
+            image={project.image}
+            category={project.category}
+            client={project.client}
+            title={project.title}
+            align={project.align}
+            mt={project.mt}
+            class="parallax-card"
+            data-speed={project.speed}
+          />
         ))
       }
     </div>
@@ -215,7 +215,7 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
           const deltaY = (mouseY - cardCenterY) / windowHeight
 
           // Subtle non-linear scaling: farther items are pulled slightly stronger
-          const magneticX = deltaX * (1 + Math.abs(deltaX)) * 25
+          const magneticX = deltaX * (1 + Math.abs(deltaX)) * 10
           const magneticY = deltaY * (1 + Math.abs(deltaY)) * 25
 
           // Combine transforms
