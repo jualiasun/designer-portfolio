@@ -1,0 +1,102 @@
+---
+import ProjectCard from './ProjectCard.astro'
+
+import exitfive from '../assets/projects/exitfive.png'
+import saastock from '../assets/projects/saastock.png'
+import rejected from '../assets/projects/rejected.png'
+import mixmax from '../assets/projects/mixmax.png'
+import zoca from '../assets/projects/zoca.png'
+import noboringdesign from '../assets/projects/noboringdesign.png'
+import digitalAds from '../assets/projects/digital-ads.png'
+import alloFiber from '../assets/projects/allo-fiber.png'
+import bravery from '../assets/projects/bravery.png'
+import warBelonging from '../assets/projects/war-belonging.png'
+import postcards from '../assets/projects/postcards.png'
+import scarf from '../assets/projects/scarf.png'
+
+const projects = [
+  {
+    image: exitfive,
+    category: 'visual identity',
+    client: 'Exitfive',
+    title: 'A community for B2B marketers',
+  },
+  {
+    image: saastock,
+    category: 'visual identity',
+    client: 'Saastock',
+    title: 'A conference for SaaS founders and leaders',
+  },
+  {
+    image: rejected,
+    category: 'visual identity',
+    client: 'Rejected project',
+    title: 'A European cybersecurity conference concept',
+  },
+  {
+    image: mixmax,
+    category: 'visual identity',
+    client: 'Mixmax',
+    title: 'An AI-powered sales platform',
+  },
+  {
+    image: zoca,
+    category: 'visual identity',
+    client: 'Zoca',
+    title: 'An AI-powered beauty & wellness marketing startup',
+  },
+  {
+    image: noboringdesign,
+    category: 'illustrations & socials',
+    client: 'Noboringdesign',
+    title: 'Design work for No Boring Design',
+  },
+  {
+    image: digitalAds,
+    category: 'Digital ads',
+    client: 'Various Clients',
+    title: 'A collection of my favourite ad designs',
+  },
+  {
+    image: alloFiber,
+    category: 'Animated videos',
+    client: 'Allo Fiber',
+    title: 'A TV advertisement for a US fiber internet provider',
+  },
+  {
+    image: bravery,
+    category: 'Illustration',
+    client: 'Passion project',
+    title: 'An illustration series celebrating Ukrainian bravery',
+  },
+  {
+    image: warBelonging,
+    category: 'Illustration',
+    client: 'Passion project',
+    title: 'A personal illustration series on war and belonging',
+  },
+  {
+    image: postcards,
+    category: 'Illustration',
+    client: 'Passion project',
+    title: 'A postcard collection of Ukrainian cities',
+  },
+  {
+    image: scarf,
+    category: 'Illustration',
+    client: 'Passion project',
+    title: 'A fundraising scarf for a friend in the army',
+  },
+]
+---
+
+<section class="bg-paper-white flex flex-col gap-8 px-4 py-12">
+  {projects.map((project) => (
+    <ProjectCard
+      image={project.image}
+      category={project.category}
+      client={project.client}
+      title={project.title}
+    />
+  ))}
+</section>

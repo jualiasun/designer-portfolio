@@ -1,6 +1,13 @@
-<header class="fixed w-full top-6 z-50 md:px-6 lg:px-21">
+---
+import clsx from 'clsx'
+---
+
+<header class="fixed w-full top-6 z-50 px-4 md:px-6 lg:px-21">
   <div
-    class="md:px-6 lg:px-14 rounded-2xl h-(--header-height) flex max-md:flex-col items-center justify-center md:justify-between gap-y-0.5 text-paper-white bg-deep-black/80 backdrop-blur-md"
+    class={clsx(
+      'rounded-[60px] h-(--header-height) flex max-md:flex-col items-center justify-center md:justify-between gap-y-0.5 text-paper-white bg-deep-black/80 backdrop-blur-md',
+      'md:rounded-[30px] md:px-6 lg:px-14',
+    )}
   >
     <p class="max-md:hidden uppercase text-sm">My work</p>
     <h1 class="text-xl text-center uppercase md:flex md:flex-col md:text-sm">
