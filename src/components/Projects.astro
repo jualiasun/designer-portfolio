@@ -41,7 +41,7 @@ const projects = [
     title: 'A European cybersecurity conference concept',
     align: 'indented-left' as const,
     mt: 'md:mt-10 lg:mt-[60px] xl:mt-[70px]',
-    speed: -0.05,
+    speed: -0.15,
   },
   {
     image: mixmax,
@@ -187,8 +187,11 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
 
   if (parallaxCards.length > 0) {
     let rafId: number | null = null
+    let mouseX = window.innerWidth / 2
+    let mouseY = window.innerHeight / 2
 
     const updateParallax = () => {
+      const windowWidth = window.innerWidth
       const windowHeight = window.innerHeight
 
       parallaxCards.forEach((card) => {
@@ -200,11 +203,21 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
         const isInView = rect.top < windowHeight + 200 && rect.bottom > -200
 
         if (isInView) {
-          // Calculate parallax based on card's position relative to viewport center
+          // Calculate scroll parallax
           const viewportProgress =
             (windowHeight - rect.top) / (windowHeight + rect.height)
           const parallaxOffset = viewportProgress * rect.height * speed * 2
-          cardEl.style.transform = `translateY(${-parallaxOffset}px)`
+
+          // Calculate cursor magnetic effect
+          const cardCenterX = rect.left + rect.width / 2
+          const cardCenterY = rect.top + rect.height / 2
+          const deltaX = (mouseX - cardCenterX) / windowWidth
+          const deltaY = (mouseY - cardCenterY) / windowHeight
+          const magneticX = deltaX * 20 // max 20px movement
+          const magneticY = deltaY * 20
+
+          // Combine transforms
+          cardEl.style.transform = `translateY(${-parallaxOffset}px) translate(${magneticX}px, ${magneticY}px)`
         }
       })
 
@@ -217,7 +230,16 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
       }
     }
 
+    const onMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+      if (rafId === null) {
+        rafId = requestAnimationFrame(updateParallax)
+      }
+    }
+
     window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('mousemove', onMouseMove, { passive: true })
     updateParallax()
   }
 </script>
