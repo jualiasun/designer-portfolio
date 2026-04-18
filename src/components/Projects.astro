@@ -1,5 +1,6 @@
 ---
 import ProjectCard from './ProjectCard.astro'
+import clsx from 'clsx'
 
 import exitfive from '../assets/projects/exitfive.png'
 import saastock from '../assets/projects/saastock.png'
@@ -20,83 +21,147 @@ const projects = [
     category: 'visual identity',
     client: 'Exitfive',
     title: 'A community for B2B marketers',
+    align: 'left' as const,
+    mt: '',
   },
   {
     image: saastock,
     category: 'visual identity',
     client: 'Saastock',
     title: 'A conference for SaaS founders and leaders',
+    align: 'right' as const,
+    mt: 'md:mt-51 lg:mt-[288px] xl:mt-[270px]',
   },
   {
     image: rejected,
     category: 'visual identity',
     client: 'Rejected project',
     title: 'A European cybersecurity conference concept',
+    align: 'indented-left' as const,
+    mt: 'md:mt-10 lg:mt-[60px] xl:mt-[70px]',
   },
   {
     image: mixmax,
     category: 'visual identity',
     client: 'Mixmax',
     title: 'An AI-powered sales platform',
+    align: 'indented-right' as const,
+    mt: 'md:mt-46 lg:mt-[260px] xl:mt-[466px]',
   },
   {
     image: zoca,
     category: 'visual identity',
     client: 'Zoca',
     title: 'An AI-powered beauty & wellness marketing startup',
+    align: 'left' as const,
+    mt: 'md:mt-48 lg:mt-[348px] xl:mt-[466px]',
   },
   {
     image: noboringdesign,
     category: 'illustrations & socials',
     client: 'Noboringdesign',
     title: 'Design work for No Boring Design',
+    align: 'right' as const,
+    mt: 'md:mt-25 lg:mt-[150px] xl:mt-[120px]',
   },
   {
     image: digitalAds,
     category: 'Digital ads',
     client: 'Various Clients',
     title: 'A collection of my favourite ad designs',
+    align: 'indented-left' as const,
+    mt: 'md:mt-25 lg:mt-[150px] xl:mt-[202px]',
   },
   {
     image: alloFiber,
     category: 'Animated videos',
     client: 'Allo Fiber',
     title: 'A TV advertisement for a US fiber internet provider',
+    align: 'right' as const,
+    mt: 'md:mt-5 xl:mt-[80px]',
   },
   {
     image: bravery,
     category: 'Illustration',
     client: 'Passion project',
     title: 'An illustration series celebrating Ukrainian bravery',
+    align: 'left' as const,
+    mt: 'md:mt-41 lg:mt-[60px] xl:mt-[270px]',
   },
   {
     image: warBelonging,
     category: 'Illustration',
     client: 'Passion project',
     title: 'A personal illustration series on war and belonging',
+    align: 'indented-right' as const,
+    mt: 'md:mt-60 lg:mt-[184px] xl:mt-[370px]',
   },
   {
     image: postcards,
     category: 'Illustration',
     client: 'Passion project',
     title: 'A postcard collection of Ukrainian cities',
+    align: 'left' as const,
+    mt: 'md:mt-5 xl:mt-[70px]',
   },
   {
     image: scarf,
     category: 'Illustration',
     client: 'Passion project',
     title: 'A fundraising scarf for a friend in the army',
+    align: 'right' as const,
+    mt: 'md:mt-41 lg:mt-[224px] xl:mt-[120px]',
   },
 ]
+
+const leftColumn = projects.filter((_, i) => i % 2 === 0)
+const rightColumn = projects.filter((_, i) => i % 2 === 1)
 ---
 
-<section class="bg-paper-white flex flex-col gap-8 px-4 py-12">
-  {projects.map((project) => (
-    <ProjectCard
-      image={project.image}
-      category={project.category}
-      client={project.client}
-      title={project.title}
-    />
-  ))}
+<section class="bg-paper-white px-4 md:px-12 lg:px-35 py-12">
+  <!-- Mobile: single column -->
+  <div class="flex flex-col gap-8 md:hidden">
+    {
+      projects.map((project) => (
+        <ProjectCard
+          image={project.image}
+          category={project.category}
+          client={project.client}
+          title={project.title}
+        />
+      ))
+    }
+  </div>
+
+  <!-- Desktop: 2-column staggered layout -->
+  <div class="hidden md:grid md:grid-cols-2">
+    <div class="flex flex-col">
+      {
+        leftColumn.map((project) => (
+          <ProjectCard
+            image={project.image}
+            category={project.category}
+            client={project.client}
+            title={project.title}
+            align={project.align}
+            mt={project.mt}
+          />
+        ))
+      }
+    </div>
+    <div class="flex flex-col">
+      {
+        rightColumn.map((project) => (
+          <ProjectCard
+            image={project.image}
+            category={project.category}
+            client={project.client}
+            title={project.title}
+            align={project.align}
+            mt={project.mt}
+          />
+        ))
+      }
+    </div>
+  </div>
 </section>
