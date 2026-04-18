@@ -59,7 +59,7 @@ const projects = [
     title: 'An AI-powered beauty & wellness marketing startup',
     align: 'left' as const,
     mt: 'md:mt-48 lg:mt-[348px] xl:mt-[466px]',
-    speed: -0.15,
+    speed: 0.08,
   },
   {
     image: noboringdesign,
@@ -68,7 +68,7 @@ const projects = [
     title: 'Design work for No Boring Design',
     align: 'right' as const,
     mt: 'md:mt-25 lg:mt-[150px] xl:mt-[120px]',
-    speed: 0,
+    speed: 0.11,
   },
   {
     image: digitalAds,
@@ -213,11 +213,13 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
           const cardCenterY = rect.top + rect.height / 2
           const deltaX = (mouseX - cardCenterX) / windowWidth
           const deltaY = (mouseY - cardCenterY) / windowHeight
-          const magneticX = deltaX * 20 // max 20px movement
-          const magneticY = deltaY * 20
+
+          // Subtle non-linear scaling: farther items are pulled slightly stronger
+          const magneticX = deltaX * (1 + Math.abs(deltaX)) * 25
+          const magneticY = deltaY * (1 + Math.abs(deltaY)) * 25
 
           // Combine transforms
-          cardEl.style.transform = `translateY(${-parallaxOffset}px) translate(${magneticX}px, ${magneticY}px)`
+          cardEl.style.transform = `translateY(${-parallaxOffset}px) translate(${-magneticX}px, ${-magneticY}px)`
         }
       })
 
