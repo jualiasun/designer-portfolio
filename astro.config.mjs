@@ -22,12 +22,17 @@ export default defineConfig({
         variants: [
           {
             src: ['./src/assets/fonts/AktivGroteskCorp-Regular.woff2'],
-            weight: 'normal',
+            weight: '400',
+            style: 'normal',
+          },
+          {
+            src: ['./src/assets/fonts/AktivGroteskCorp-Medium.woff2'],
+            weight: '500',
             style: 'normal',
           },
           {
             src: ['./src/assets/fonts/AktivGroteskCorp-Bold.woff2'],
-            weight: 'bold',
+            weight: '700',
             style: 'normal',
           },
         ],
