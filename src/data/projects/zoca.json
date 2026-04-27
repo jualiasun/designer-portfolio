@@ -8,5 +8,132 @@
     "align": "left",
     "mt": "md:mt-48 lg:mt-[348px] xl:mt-[466px]",
     "speed": 0.08
-  }
+  },
+  "blocks": [
+    { "type": "media", "files": ["../../assets/projects/zoca/1.jpg"] },
+    {
+      "type": "text",
+      "title": "Project Overview",
+      "text": "Zoca is an AI marketing platform for small businesses like salons and spas. They needed a brand refresh to show their positive, community-focused spirit while also highlighting their advanced AI technology."
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/2.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/2-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/3.jpg"],
+      "padding": "default"
+    },
+    {
+      "type": "text",
+      "title": "Elements That Build a Story",
+      "text": "The Zoca brand is built on a few core parts. First, we use authentic photography. These are AI-generated images of real-looking salons that represent Zoca's clients. To make these photos unique, we use the \"Triple Path\"—a special design element created specifically for the brand.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/4.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/4-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/5.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/5-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/zoca/6.jpg",
+        "../../assets/projects/zoca/7.jpg"
+      ],
+      "padding": "default",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/zoca/6-sm.jpg",
+        "../../assets/projects/zoca/7-sm.jpg"
+      ],
+      "padding": "default",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/8.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/9-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "More About the Element",
+      "text": "The Triple Path is used to highlight the hard work and talent of salon owners. It is very flexible: it can be used as a path to a door, a frame, a portal, or even an outline around a person.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/10-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/8.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/zoca/9.jpg",
+        "../../assets/projects/zoca/10.jpg"
+      ],
+      "padding": "default",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "text",
+      "title": "Textures & Colors",
+      "text": "To make the brand feel more real, we added \"beauty textures.\" These look great as backgrounds or inside the Triple Path. The color palette is elegant, using dark magenta as the main color. We also used bright accent colors to show Zoca’s positive and energetic personality.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    { "type": "media", "files": ["../../assets/projects/zoca/11.jpg"] },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/12.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/zoca/12-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "nbd-banner",
+      "projectName": "Visual Identity for Zoca",
+      "team": ["Creative Direction: Juan Pablo Lopez"]
+    }
+  ]
 }

@@ -109,7 +109,6 @@
     },
     {
       "type": "nbd-banner",
-      "breakpoints": ["sm", "md"],
       "projectName": "Visual Identity for Mixmax",
       "team": [
         "Creative Direction: Juan Pablo Lopez",
