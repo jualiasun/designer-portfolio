@@ -25,7 +25,15 @@ const projects = defineCollection({
               type: z.literal('media'),
               breakpoints,
               files: z.array(z.union([image(), z.string()])).min(1),
-              padding: z.enum(['none', 'default']).default('none'),
+              padding: z
+                .union([
+                  z.enum(['none', 'default']),
+                  z.object({
+                    inline: z.string().optional(),
+                    block: z.string().optional(),
+                  }),
+                ])
+                .default('none'),
               aspect: z.string().optional(),
               overlayImage: image().optional(),
             }),

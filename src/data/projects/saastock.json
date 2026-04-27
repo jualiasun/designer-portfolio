@@ -131,7 +131,7 @@
     },
     {
       "type": "media",
-      "padding": "default",
+      "padding": { "inline": "60px", "block": "168px" },
       "files": ["../../assets/projects/saastock/13.png"],
       "breakpoints": ["md"]
     },
