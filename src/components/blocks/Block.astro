@@ -1,10 +1,8 @@
 ---
-import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
+import Media from './Media.astro'
 import NbdBanner from './NbdBanner.astro'
-import PaddedMedia from './PaddedMedia.astro'
 import TextContent from './TextContent.astro'
-import Video from './Video.astro'
 import clsx from 'clsx'
 
 type ProjectBlock = NonNullable<
@@ -25,11 +23,11 @@ const bpClass = [
 ---
 
 <div class={clsx('bg-deep-black', bpClass)}>
-  {block.type === 'image' && <Image src={block.image} alt="" />}
   {
-    block.type === 'video' && (
-      <Video
-        src={block.src}
+    block.type === 'media' && (
+      <Media
+        files={block.files}
+        padding={block.padding}
         aspect={block.aspect}
         overlayImage={block.overlayImage}
       />
@@ -43,11 +41,6 @@ const bpClass = [
         variant={block.variant}
         padding={block.padding}
       />
-    )
-  }
-  {
-    block.type === 'padded-media' && (
-      <PaddedMedia files={block.files} overlayImage={block.overlayImage} />
     )
   }
   {

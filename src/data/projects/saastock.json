@@ -10,19 +10,20 @@
     "speed": 0.1
   },
   "blocks": [
-    { "type": "image", "image": "../../assets/projects/saastock/1.jpg" },
+    { "type": "media", "files": ["../../assets/projects/saastock/1.jpg"] },
     {
       "type": "text",
       "title": "Project Overview",
       "text": "SaaStock is a global community and events platform for the B2B SaaS industry. They needed a new brand identity to communicate their three main pillars: events, community, and education."
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/2.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/2.jpg"],
       "breakpoints": ["md"]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": [
         "../../assets/projects/saastock/3.jpg",
         "../../assets/projects/saastock/4.jpg"
@@ -30,23 +31,23 @@
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/2-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/2-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/2-1-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/2-1-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/4-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/4-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/3-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/3-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
@@ -57,7 +58,8 @@
       "padding": "compact"
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["../../assets/projects/saastock/5.jpg"]
     },
     {
@@ -68,47 +70,48 @@
       "padding": "compact"
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/6.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/6.jpg"],
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/7.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/7.jpg"],
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/8.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/8.jpg"],
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/9.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/9.jpg"],
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/6-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/6-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/7-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/7-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/8-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/8-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/9-sm.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/9-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["../../assets/projects/saastock/10.jpg"]
     },
     {
@@ -119,20 +122,22 @@
       "padding": "compact"
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": [
         "../../assets/projects/saastock/11.jpg",
         "../../assets/projects/saastock/12.jpg"
       ]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["../../assets/projects/saastock/13.png"],
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/saastock/14.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/saastock/14.jpg"],
       "breakpoints": ["md"]
     },
     {

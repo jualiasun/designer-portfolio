@@ -10,22 +10,23 @@
     "speed": -0.1
   },
   "blocks": [
-    { "type": "image", "image": "../../assets/projects/exitfive/1.jpg" },
+    { "type": "media", "files": ["../../assets/projects/exitfive/1.jpg"] },
     {
       "type": "text",
       "title": "Project Overview",
       "text": "Exit Five is a community for B2B marketing professionals. While the brand was already well-known, it needed a fresh look to help it stand out from competitors. I created a new visual identity that helps them tell their story in a more unique and memorable way."
     },
-    { "type": "image", "image": "../../assets/projects/exitfive/2.jpg" },
+    { "type": "media", "files": ["../../assets/projects/exitfive/2.jpg"] },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["/projects/exitfive/3.mp4"],
       "overlayImage": "../../assets/projects/exitfive/logo.svg",
       "breakpoints": ["md"]
     },
     {
-      "type": "video",
-      "src": "/projects/exitfive/3.mp4",
+      "type": "media",
+      "files": ["/projects/exitfive/3.mp4"],
       "overlayImage": "../../assets/projects/exitfive/logo.svg",
       "breakpoints": ["sm"],
       "aspect": "4/5"
@@ -37,9 +38,10 @@
       "variant": "dark",
       "padding": "compact"
     },
-    { "type": "image", "image": "../../assets/projects/exitfive/4.jpg" },
+    { "type": "media", "files": ["../../assets/projects/exitfive/4.jpg"] },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": [
         "../../assets/projects/exitfive/5.jpg",
         "/projects/exitfive/6.mp4"
@@ -47,8 +49,8 @@
       "breakpoints": ["md"]
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/exitfive/5.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/exitfive/5.jpg"],
       "breakpoints": ["sm"]
     },
     {
@@ -59,29 +61,33 @@
       "padding": "compact"
     },
     {
-      "type": "video",
-      "src": "/projects/exitfive/6.mp4",
+      "type": "media",
+      "files": ["/projects/exitfive/6.mp4"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["/projects/exitfive/7.mp4"]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": [
         "../../assets/projects/exitfive/8.jpg",
         "/projects/exitfive/9.mp4"
       ]
     },
-    { "type": "image", "image": "../../assets/projects/exitfive/10.jpg" },
+    { "type": "media", "files": ["../../assets/projects/exitfive/10.jpg"] },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["../../assets/projects/exitfive/11.jpg"],
       "breakpoints": ["md"]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["../../assets/projects/exitfive/11-sm.jpg"],
       "breakpoints": ["sm"]
     },
@@ -93,7 +99,7 @@
       "padding": "compact",
       "breakpoints": ["sm"]
     },
-    { "type": "image", "image": "../../assets/projects/exitfive/12.jpg" },
+    { "type": "media", "files": ["../../assets/projects/exitfive/12.jpg"] },
     {
       "type": "text",
       "title": "Impact",
@@ -101,12 +107,13 @@
       "variant": "dark"
     },
     {
-      "type": "image",
-      "image": "../../assets/projects/exitfive/13.jpg",
+      "type": "media",
+      "files": ["../../assets/projects/exitfive/13.jpg"],
       "breakpoints": ["sm"]
     },
     {
-      "type": "padded-media",
+      "type": "media",
+      "padding": "default",
       "files": ["../../assets/projects/exitfive/13.jpg"],
       "breakpoints": ["md"]
     },

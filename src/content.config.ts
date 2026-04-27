@@ -22,16 +22,12 @@ const projects = defineCollection({
         .array(
           z.discriminatedUnion('type', [
             z.object({
-              type: z.literal('image'),
+              type: z.literal('media'),
               breakpoints,
-              image: image(),
-            }),
-            z.object({
-              type: z.literal('video'),
-              breakpoints,
-              src: z.string(),
-              overlayImage: image().optional(),
+              files: z.array(z.union([image(), z.string()])).min(1),
+              padding: z.enum(['none', 'default']).default('none'),
               aspect: z.string().optional(),
+              overlayImage: image().optional(),
             }),
             z.object({
               type: z.literal('text'),
@@ -40,12 +36,6 @@ const projects = defineCollection({
               text: z.string(),
               variant: z.enum(['light', 'dark']).default('light'),
               padding: z.enum(['default', 'compact']).default('default'),
-            }),
-            z.object({
-              type: z.literal('padded-media'),
-              breakpoints,
-              files: z.array(z.union([image(), z.string()])).min(1),
-              overlayImage: image().optional(),
             }),
             z.object({
               type: z.literal('nbd-banner'),

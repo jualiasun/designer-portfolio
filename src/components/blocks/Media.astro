@@ -1,0 +1,73 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+import clsx from 'clsx'
+
+type FileItem = ImageMetadata | string
+
+interface Props {
+  files: FileItem[]
+  padding?: 'none' | 'default'
+  aspect?: string
+  overlayImage?: ImageMetadata
+}
+
+const { files, padding = 'none', aspect, overlayImage } = Astro.props
+
+const isPadded = padding === 'default'
+
+const containerClass = clsx(
+  'relative flex flex-col',
+  isPadded && 'gap-x-10 md:flex-row md:p-15',
+)
+
+const imageClass = isPadded ? 'flex-1 min-w-0' : ''
+const videoClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
+---
+
+<section class={containerClass}>
+  {
+    files.map((file) =>
+      typeof file === 'string' ? (
+        aspect ? (
+          <div
+            class={clsx(
+              'overflow-hidden',
+              isPadded ? 'flex-1 min-w-0' : 'w-full',
+            )}
+            style={`aspect-ratio: ${aspect}`}
+          >
+            <video
+              src={file}
+              autoplay
+              loop
+              muted
+              playsinline
+              class="size-full object-cover"
+            />
+          </div>
+        ) : (
+          <video
+            src={file}
+            autoplay
+            loop
+            muted
+            playsinline
+            class={videoClass}
+          />
+        )
+      ) : (
+        <Image src={file} alt="" class={imageClass} />
+      ),
+    )
+  }
+  {
+    overlayImage && (
+      <Image
+        src={overlayImage}
+        alt=""
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] md:w-100"
+      />
+    )
+  }
+</section>
