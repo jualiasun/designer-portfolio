@@ -1,0 +1,114 @@
+{
+  "preview": {
+    "order": 3,
+    "image": "../../assets/projects/link-2024/preview.png",
+    "category": "visual identity",
+    "client": "Rejected project",
+    "title": "A European cybersecurity conference concept",
+    "align": "indented-left",
+    "mt": "md:mt-10 lg:mt-[60px] xl:mt-[70px]",
+    "speed": -0.15
+  },
+  "blocks": [
+    { "type": "media", "files": ["../../assets/projects/link-2024/1.jpg"] },
+    {
+      "type": "text",
+      "title": "Project Overview",
+      "text": "This project is a visual identity concept for a cybersecurity conference focused on threat intelligence. Due to NDA requirements, some design details have been slightly modified for this portfolio."
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/2.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/3.jpg"],
+      "padding": "default",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/2-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/3-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/4-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Building the Sub-brand",
+      "text": "The goal was to create a specific identity for \"Link 2024\" that felt like part of the company’s main brand while still having its own unique look. We developed a visual language that allows the conference branding to stand out on its own while staying connected to the agency’s previous work for the parent company.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/4.jpg"],
+      "padding": "default"
+    },
+    {
+      "type": "text",
+      "title": "Visualizing Intelligence",
+      "text": "The design reflects the future of cyber intelligence. I used minimalistic, dynamic \"shining lines\" to create a futuristic feel. These elements symbolize how intelligence is at the core of modern cybersecurity, leading the way into a new era for the industry.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/5.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/5-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/link-2024/6.jpg",
+        "../../assets/projects/link-2024/7.jpg"
+      ],
+      "padding": "default",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/link-2024/6.jpg",
+        "../../assets/projects/link-2024/5-1-sm.jpg"
+      ],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/8.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/link-2024/6-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "padding": { "inline": "60px", "block": "168px" },
+      "files": ["../../assets/projects/link-2024/9.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "nbd-banner",
+      "breakpoints": ["sm", "md"],
+      "projectName": "Visual Identity for Link 2024",
+      "team": ["Creative Direction: Alina Shupikova"]
+    }
+  ]
+}
