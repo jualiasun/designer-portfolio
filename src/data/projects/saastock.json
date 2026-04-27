@@ -8,5 +8,138 @@
     "align": "right",
     "mt": "md:mt-51 lg:mt-[288px] xl:mt-[270px]",
     "speed": 0.1
-  }
+  },
+  "blocks": [
+    { "type": "image", "image": "../../assets/projects/saastock/1.jpg" },
+    {
+      "type": "text",
+      "title": "Project Overview",
+      "text": "SaaStock is a global community and events platform for the B2B SaaS industry. They needed a new brand identity to communicate their three main pillars: events, community, and education."
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/2.jpg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "padded-media",
+      "files": [
+        "../../assets/projects/saastock/3.jpg",
+        "../../assets/projects/saastock/4.jpg"
+      ],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/2-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/2-1-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/4-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/3-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "The Logotype",
+      "text": "The logo and all graphic elements are based on one question: how do we show SaaStock’s main value – connection? We created a special symbol called the \"Link.\" By connecting two unique parts, this shape became the main graphic element and the foundation of the brand.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "padded-media",
+      "files": ["../../assets/projects/saastock/5.jpg"]
+    },
+    {
+      "type": "text",
+      "title": "A Clean but Vibrant Look",
+      "text": "The challenge was to create a black-and-white brand that respects their history but also feels energetic. This is how we chose the color palette. When combined with the \"Link\" symbol, we can create many different shapes and frames to show the connections SaaStock helps build.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/6.jpg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/7.jpg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/8.jpg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/9.jpg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/6-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/7-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/8-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/9-sm.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "padded-media",
+      "files": ["../../assets/projects/saastock/10.jpg"]
+    },
+    {
+      "type": "text",
+      "title": "Photography & Icons",
+      "text": "For the photography, we decided to use real photos from events because they capture the true spirit of the brand. We also designed a small set of icons that look like pins to create a friendly community feeling.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "padded-media",
+      "files": [
+        "../../assets/projects/saastock/11.jpg",
+        "../../assets/projects/saastock/12.jpg"
+      ]
+    },
+    {
+      "type": "padded-media",
+      "files": ["../../assets/projects/saastock/13.png"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/saastock/14.jpg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "nbd-banner",
+      "breakpoints": ["sm", "md"],
+      "projectName": "Visual Identity for Saastock",
+      "team": ["Creative Direction: Juan Pablo Lopez"]
+    }
+  ]
 }
