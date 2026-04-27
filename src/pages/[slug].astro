@@ -1,12 +1,19 @@
 ---
 import { getCollection } from 'astro:content'
+import Block from '../components/blocks/Block.astro'
+import Layout from '../layouts/Layout.astro'
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects')
   return projects.map((project) => ({
     params: { slug: project.id },
+    props: { project },
   }))
 }
 
-const { slug } = Astro.params
+const { project } = Astro.props
 ---
+
+<Layout title={project.data.preview.title}>
+  {project.data.blocks?.map((block) => <Block block={block} />)}
+</Layout>

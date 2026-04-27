@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "allOf": [
+      {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the project"
+          }
+        },
+        "required": ["id"]
+      },
+      {
+        "$ref": "../../.astro/collections/projects.schema.json#/additionalProperties"
+      }
+    ]
+  }
+}

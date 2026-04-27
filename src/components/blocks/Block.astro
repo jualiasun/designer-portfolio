@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+import PaddedMedia from './PaddedMedia.astro'
+import TextContent from './TextContent.astro'
+import Video from './Video.astro'
+
+type ProjectBlock = NonNullable<
+  CollectionEntry<'projects'>['data']['blocks']
+>[number]
+
+interface Props {
+  block: ProjectBlock
+}
+
+const { block } = Astro.props
+
+const bp = block.breakpoints
+const bpClass = [
+  ...(bp.includes('sm') ? [] : ['hidden']),
+  ...(bp.includes('md') ? ['md:block'] : ['md:hidden']),
+].join(' ')
+---
+
+<div class={bpClass}>
+  {block.type === 'image' && <Image src={block.image} alt="" />}
+  {
+    block.type === 'video' && (
+      <Video
+        src={block.src}
+        aspect={block.aspect}
+        overlayImage={block.overlayImage}
+      />
+    )
+  }
+  {
+    block.type === 'text' && (
+      <TextContent
+        title={block.title}
+        text={block.text}
+        variant={block.variant}
+        padding={block.padding}
+      />
+    )
+  }
+  {
+    block.type === 'padded-media' && (
+      <PaddedMedia files={block.files} overlayImage={block.overlayImage} />
+    )
+  }
+</div>

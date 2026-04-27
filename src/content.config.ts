@@ -2,6 +2,8 @@ import { defineCollection } from 'astro:content'
 import { file } from 'astro/loaders'
 import { z } from 'astro/zod'
 
+const breakpoints = z.array(z.enum(['sm', 'md'])).default(['sm', 'md'])
+
 const projects = defineCollection({
   loader: file('src/data/projects.json'),
   schema: ({ image }) =>
@@ -16,6 +18,44 @@ const projects = defineCollection({
         mt: z.string(),
         speed: z.number(),
       }),
+      blocks: z
+        .array(
+          z.discriminatedUnion('type', [
+            z.object({
+              type: z.literal('image'),
+              breakpoints,
+              image: image(),
+            }),
+            z.object({
+              type: z.literal('video'),
+              breakpoints,
+              src: z.string(),
+              overlayImage: image().optional(),
+              aspect: z.string().optional(),
+            }),
+            z.object({
+              type: z.literal('text'),
+              breakpoints,
+              title: z.string(),
+              text: z.string(),
+              variant: z.enum(['light', 'dark']).default('light'),
+              padding: z.enum(['default', 'compact']).default('default'),
+            }),
+            z.object({
+              type: z.literal('padded-media'),
+              breakpoints,
+              files: z.array(z.union([image(), z.string()])).min(1),
+              overlayImage: image().optional(),
+            }),
+            z.object({
+              type: z.literal('nbd-banner'),
+              breakpoints,
+              projectName: z.string(),
+              team: z.array(z.string()),
+            }),
+          ]),
+        )
+        .optional(),
     }),
 })
 
