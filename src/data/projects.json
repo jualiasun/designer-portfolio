@@ -1,0 +1,158 @@
+[
+  {
+    "id": "exitfive",
+    "preview": {
+      "order": 1,
+      "image": "../assets/projects/exitfive.png",
+      "category": "visual identity",
+      "client": "Exitfive",
+      "title": "A community for\nB2B marketers",
+      "align": "left",
+      "mt": "",
+      "speed": -0.1
+    }
+  },
+  {
+    "id": "saastock",
+    "preview": {
+      "order": 2,
+      "image": "../assets/projects/saastock.png",
+      "category": "visual identity",
+      "client": "Saastock",
+      "title": "A conference for SaaS founders and leaders",
+      "align": "right",
+      "mt": "md:mt-51 lg:mt-[288px] xl:mt-[270px]",
+      "speed": 0.1
+    }
+  },
+  {
+    "id": "rejected",
+    "preview": {
+      "order": 3,
+      "image": "../assets/projects/rejected.png",
+      "category": "visual identity",
+      "client": "Rejected project",
+      "title": "A European cybersecurity conference concept",
+      "align": "indented-left",
+      "mt": "md:mt-10 lg:mt-[60px] xl:mt-[70px]",
+      "speed": -0.15
+    }
+  },
+  {
+    "id": "mixmax",
+    "preview": {
+      "order": 4,
+      "image": "../assets/projects/mixmax.png",
+      "category": "visual identity",
+      "client": "Mixmax",
+      "title": "An AI-powered sales platform",
+      "align": "indented-right",
+      "mt": "md:mt-46 lg:mt-[260px] xl:mt-[466px]",
+      "speed": 0.2
+    }
+  },
+  {
+    "id": "zoca",
+    "preview": {
+      "order": 5,
+      "image": "../assets/projects/zoca.png",
+      "category": "visual identity",
+      "client": "Zoca",
+      "title": "An AI-powered beauty & wellness marketing startup",
+      "align": "left",
+      "mt": "md:mt-48 lg:mt-[348px] xl:mt-[466px]",
+      "speed": 0.08
+    }
+  },
+  {
+    "id": "noboringdesign",
+    "preview": {
+      "order": 6,
+      "image": "../assets/projects/noboringdesign.png",
+      "category": "illustrations & socials",
+      "client": "Noboringdesign",
+      "title": "Design work for No Boring Design",
+      "align": "right",
+      "mt": "md:mt-25 lg:mt-[150px] xl:mt-[120px]",
+      "speed": 0.11
+    }
+  },
+  {
+    "id": "digital-ads",
+    "preview": {
+      "order": 7,
+      "image": "../assets/projects/digital-ads.png",
+      "category": "Digital ads",
+      "client": "Various Clients",
+      "title": "A collection of my favourite ad designs",
+      "align": "indented-left",
+      "mt": "md:mt-25 lg:mt-[150px] xl:mt-[202px]",
+      "speed": -0.12
+    }
+  },
+  {
+    "id": "allo-fiber",
+    "preview": {
+      "order": 8,
+      "image": "../assets/projects/allo-fiber.png",
+      "category": "Animated videos",
+      "client": "Allo Fiber",
+      "title": "A TV advertisement for a US fiber internet provider",
+      "align": "right",
+      "mt": "md:mt-5 xl:mt-[80px]",
+      "speed": 0.1
+    }
+  },
+  {
+    "id": "bravery",
+    "preview": {
+      "order": 9,
+      "image": "../assets/projects/bravery.png",
+      "category": "Illustration",
+      "client": "Passion project",
+      "title": "An illustration series celebrating Ukrainian bravery",
+      "align": "left",
+      "mt": "md:mt-41 lg:mt-[60px] xl:mt-[270px]",
+      "speed": 0
+    }
+  },
+  {
+    "id": "war-belonging",
+    "preview": {
+      "order": 10,
+      "image": "../assets/projects/war-belonging.png",
+      "category": "Illustration",
+      "client": "Passion project",
+      "title": "A personal illustration series on war and belonging",
+      "align": "indented-right",
+      "mt": "md:mt-60 lg:mt-[184px] xl:mt-[370px]",
+      "speed": 0.2
+    }
+  },
+  {
+    "id": "postcards",
+    "preview": {
+      "order": 11,
+      "image": "../assets/projects/postcards.png",
+      "category": "Illustration",
+      "client": "Passion project",
+      "title": "A postcard collection of Ukrainian cities",
+      "align": "left",
+      "mt": "md:mt-5 xl:mt-[70px]",
+      "speed": -0.12
+    }
+  },
+  {
+    "id": "scarf",
+    "preview": {
+      "order": 12,
+      "image": "../assets/projects/scarf.png",
+      "category": "Illustration",
+      "client": "Passion project",
+      "title": "A fundraising scarf for a friend in the army",
+      "align": "right",
+      "mt": "md:mt-41 lg:mt-[224px] xl:mt-[120px]",
+      "speed": 0.3
+    }
+  }
+]

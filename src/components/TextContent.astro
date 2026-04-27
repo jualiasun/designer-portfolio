@@ -1,0 +1,26 @@
+---
+import clsx from 'clsx'
+
+type Variant = 'light' | 'dark'
+
+interface Props {
+  title: string
+  text: string
+  variant?: Variant
+}
+
+const { title, text, variant = 'light' } = Astro.props
+---
+
+<section
+  class={clsx(
+    'flex flex-col gap-[18px] md:gap-7 p-10 md:px-[140px] md:py-[100px]',
+    variant === 'light' && 'bg-paper-white text-deep-black',
+    variant === 'dark' && 'bg-deep-black text-paper-white',
+  )}
+>
+  <h3 class="font-medium text-base md:text-[32px] leading-[1.12]">{title}</h3>
+  <p class="text-sm md:text-xl leading-[1.207] md:leading-[1.032] md:max-w-[671px]">
+    {text}
+  </p>
+</section>
