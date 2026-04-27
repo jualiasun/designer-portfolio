@@ -9,16 +9,20 @@ import clsx from 'clsx'
       'md:grid md:grid-cols-[1fr_auto_1fr] md:px-6 lg:px-14',
     )}
   >
-    <p
+    <a
+      id="projects-link"
+      href="/#projects"
       class="max-md:hidden uppercase text-sm lg:text-base xl:text-lg md:justify-self-start"
     >
       My work
-    </p>
+    </a>
     <h1
       class="text-xl text-center uppercase md:flex md:flex-col md:text-sm lg:text-base xl:text-lg md:leading-[1.3]"
     >
-      <span>Yuliia</span>
-      <span>Olomska</span>
+      <a href="/" class="contents">
+        <span>Yuliia</span>
+        <span>Olomska</span>
+      </a>
     </h1>
     <p class="text-[10px] md:hidden">Giving shape to thought.</p>
     <div
@@ -41,3 +45,20 @@ import clsx from 'clsx'
     </div>
   </div>
 </header>
+
+<script>
+  const link = document.getElementById(
+    'projects-link',
+  ) as HTMLAnchorElement | null
+
+  link?.addEventListener('click', (event) => {
+    if (window.location.pathname !== '/') return
+
+    const target = document.getElementById('projects')
+    if (!target) return
+
+    event.preventDefault()
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    history.replaceState(null, '', '#projects')
+  })
+</script>
