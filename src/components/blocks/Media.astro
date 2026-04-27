@@ -31,8 +31,7 @@ const containerStyle = isCustomPadding
   ? `--media-padding-inline: ${padding.inline ?? '0'}; --media-padding-block: ${padding.block ?? '0'};`
   : undefined
 
-const imageClass = isPadded ? 'flex-1 min-w-0' : ''
-const videoClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
+const mediaClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
 ---
 
 <section class={containerClass} style={containerStyle}>
@@ -41,10 +40,7 @@ const videoClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
       typeof file === 'string' ? (
         aspect ? (
           <div
-            class={clsx(
-              'overflow-hidden',
-              isPadded ? 'flex-1 min-w-0' : 'w-full',
-            )}
+            class={clsx('overflow-hidden', mediaClass)}
             style={`aspect-ratio: ${aspect}`}
           >
             <video
@@ -63,11 +59,11 @@ const videoClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
             loop
             muted
             playsinline
-            class={videoClass}
+            class={mediaClass}
           />
         )
       ) : (
-        <Image src={file} alt="" class={imageClass} />
+        <Image src={file} alt="" class={mediaClass} />
       ),
     )
   }

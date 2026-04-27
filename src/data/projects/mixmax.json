@@ -8,5 +8,114 @@
     "align": "indented-right",
     "mt": "md:mt-46 lg:mt-[260px] xl:mt-[466px]",
     "speed": 0.2
-  }
+  },
+  "blocks": [
+    { "type": "media", "files": ["../../assets/projects/mixmax/1.jpg"] },
+    {
+      "type": "text",
+      "title": "Project Overview",
+      "text": "Mixmax is an AI-powered sales platform that helps teams close deals faster. As the product grew, the old brand no longer matched the company’s vision. I had the opportunity to build a new identity from the ground up to better reflect their voice, visuals, and story."
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/2.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/2-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/3.jpg"],
+      "padding": "default"
+    },
+    {
+      "type": "text",
+      "title": "The Logotype",
+      "text": "We updated the typography to match the brand’s new personality and typefaces. We also reimagined the existing ribbon-shaped \"M\" symbol. By refining its look and giving it a fresh meaning, we turned it into a modern mark that aligns with the new brand direction.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    { "type": "media", "files": ["../../assets/projects/mixmax/4.jpg"] },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/mixmax/5.jpg",
+        "../../assets/projects/mixmax/6.jpg"
+      ],
+      "padding": "default",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/mixmax/5.jpg",
+        "../../assets/projects/mixmax/6-sm.jpg"
+      ],
+      "padding": "default",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Ai Usage",
+      "text": "Mixmax wanted to keep a human feel, but standard stock photos didn’t fit their \"rebellious and magical\" brand archetype. Instead, we created \"Sales Heroes.\" These are stylized characters showing sellers working from unexpected places – like on a unicorn or a cloud – to show that sales can be fun when powered by Mixmax.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/7.jpg"],
+      "padding": "default"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/8.png"],
+      "padding": { "inline": "60px", "block": "168px" },
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/9.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/10-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Momentum",
+      "text": "To tie the identity together, I created a graphic element called \"Momentum Ribbons.\" Derived from the logo’s ribbon symbol, these lines act as a \"pulse\" for a deal. They represent the energy and movement of a successful sale, creating a consistent look across the entire brand.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/10.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/11.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/mixmax/11-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "nbd-banner",
+      "breakpoints": ["sm", "md"],
+      "projectName": "Visual Identity for Mixmax",
+      "team": [
+        "Creative Direction: Juan Pablo Lopez",
+        "Copywriting: Nikola Sekulić",
+        "Design: Hector Salazar"
+      ]
+    }
+  ]
 }
