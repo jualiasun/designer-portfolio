@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 10,
+    "image": "../../assets/projects/war-belonging/preview.png",
+    "category": "Illustration",
+    "client": "Passion project",
+    "title": "A personal illustration series on war and belonging",
+    "align": "indented-right",
+    "mt": "md:mt-60 lg:mt-[184px] xl:mt-[370px]",
+    "speed": 0.2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 4,
+    "image": "../../assets/projects/mixmax/preview.png",
+    "category": "visual identity",
+    "client": "Mixmax",
+    "title": "An AI-powered sales platform",
+    "align": "indented-right",
+    "mt": "md:mt-46 lg:mt-[260px] xl:mt-[466px]",
+    "speed": 0.2
+  }
+}

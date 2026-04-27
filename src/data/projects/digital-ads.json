@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 7,
+    "image": "../../assets/projects/digital-ads/preview.png",
+    "category": "Digital ads",
+    "client": "Various Clients",
+    "title": "A collection of my favourite ad designs",
+    "align": "indented-left",
+    "mt": "md:mt-25 lg:mt-[150px] xl:mt-[202px]",
+    "speed": -0.12
+  }
+}

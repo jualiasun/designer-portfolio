@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 8,
+    "image": "../../assets/projects/allo-fiber/preview.png",
+    "category": "Animated videos",
+    "client": "Allo Fiber",
+    "title": "A TV advertisement for a US fiber internet provider",
+    "align": "right",
+    "mt": "md:mt-5 xl:mt-[80px]",
+    "speed": 0.1
+  }
+}

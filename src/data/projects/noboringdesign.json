@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 6,
+    "image": "../../assets/projects/noboringdesign/preview.png",
+    "category": "illustrations & socials",
+    "client": "Noboringdesign",
+    "title": "Design work for No Boring Design",
+    "align": "right",
+    "mt": "md:mt-25 lg:mt-[150px] xl:mt-[120px]",
+    "speed": 0.11
+  }
+}

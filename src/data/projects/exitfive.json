@@ -1,0 +1,124 @@
+{
+  "preview": {
+    "order": 1,
+    "image": "../../assets/projects/exitfive/preview.png",
+    "category": "visual identity",
+    "client": "Exitfive",
+    "title": "A community for\nB2B marketers",
+    "align": "left",
+    "mt": "",
+    "speed": -0.1
+  },
+  "blocks": [
+    { "type": "image", "image": "../../assets/projects/exitfive/1.jpg" },
+    {
+      "type": "text",
+      "title": "Project Overview",
+      "text": "Exit Five is a community for B2B marketing professionals. While the brand was already well-known, it needed a fresh look to help it stand out from competitors. I created a new visual identity that helps them tell their story in a more unique and memorable way."
+    },
+    { "type": "image", "image": "../../assets/projects/exitfive/2.jpg" },
+    {
+      "type": "padded-media",
+      "files": ["/projects/exitfive/3.mp4"],
+      "overlayImage": "../../assets/projects/exitfive/logo.svg",
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "video",
+      "src": "/projects/exitfive/3.mp4",
+      "overlayImage": "../../assets/projects/exitfive/logo.svg",
+      "breakpoints": ["sm"],
+      "aspect": "4/5"
+    },
+    {
+      "type": "text",
+      "title": "The Logotype",
+      "text": "The logo is inspired by the brand’s name and its history. It’s based on the familiar look of a highway exit sign—specifically the one the founder used to take. We combined that nostalgic feeling with a modern design to create something both classic and new.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    { "type": "image", "image": "../../assets/projects/exitfive/4.jpg" },
+    {
+      "type": "padded-media",
+      "files": [
+        "../../assets/projects/exitfive/5.jpg",
+        "/projects/exitfive/6.mp4"
+      ],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/exitfive/5.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Visual Language",
+      "text": "We blended road elements with marketing themes to show the \"journey\" of a B2B marketer. We turned U.S. road signs into icons and used road imagery as a main theme. It’s an invitation for marketers to take the \"Exit Five turn\" to find new opportunities in their careers.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "video",
+      "src": "/projects/exitfive/6.mp4",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "padded-media",
+      "files": ["/projects/exitfive/7.mp4"]
+    },
+    {
+      "type": "padded-media",
+      "files": [
+        "../../assets/projects/exitfive/8.jpg",
+        "/projects/exitfive/9.mp4"
+      ]
+    },
+    { "type": "image", "image": "../../assets/projects/exitfive/10.jpg" },
+    {
+      "type": "padded-media",
+      "files": ["../../assets/projects/exitfive/11.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "padded-media",
+      "files": ["../../assets/projects/exitfive/11-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Webflow Recognition",
+      "text": "The Exit Five website, built using this new visual identity, was officially recognized by Webflow. They featured the project on their official Instagram and LinkedIn channels as a standout example of design and execution.",
+      "variant": "dark",
+      "padding": "compact",
+      "breakpoints": ["sm"]
+    },
+    { "type": "image", "image": "../../assets/projects/exitfive/12.jpg" },
+    {
+      "type": "text",
+      "title": "Impact",
+      "text": "This was a close collaboration with founder Dave Gerhardt. To show the power of our work, we skipped the moodboards and presented an almost finished design right away. Dave loved it, and the project became a huge success. The website was featured on Webflow’s social media, and the design caught the eye of many SaaS companies, bringing a wave of new clients to our agency.",
+      "variant": "dark"
+    },
+    {
+      "type": "image",
+      "image": "../../assets/projects/exitfive/13.jpg",
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "padded-media",
+      "files": ["../../assets/projects/exitfive/13.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "nbd-banner",
+      "breakpoints": ["sm", "md"],
+      "projectName": "Visual Identity for Exitfive",
+      "team": [
+        "Creative Direction: Alina Shupikova",
+        "Web & Quality Control: Juan Pablo Lopez",
+        "Motion Design: Leonel Carreras"
+      ]
+    }
+  ]
+}

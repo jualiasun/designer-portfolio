@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 2,
+    "image": "../../assets/projects/saastock/preview.png",
+    "category": "visual identity",
+    "client": "Saastock",
+    "title": "A conference for SaaS founders and leaders",
+    "align": "right",
+    "mt": "md:mt-51 lg:mt-[288px] xl:mt-[270px]",
+    "speed": 0.1
+  }
+}

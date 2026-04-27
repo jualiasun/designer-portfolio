@@ -1,11 +1,11 @@
 import { defineCollection } from 'astro:content'
-import { file } from 'astro/loaders'
+import { glob } from 'astro/loaders'
 import { z } from 'astro/zod'
 
 const breakpoints = z.array(z.enum(['sm', 'md'])).default(['sm', 'md'])
 
 const projects = defineCollection({
-  loader: file('src/data/projects.json'),
+  loader: glob({ pattern: '**/*.json', base: './src/data/projects' }),
   schema: ({ image }) =>
     z.object({
       preview: z.object({

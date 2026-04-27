@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 11,
+    "image": "../../assets/projects/postcards/preview.png",
+    "category": "Illustration",
+    "client": "Passion project",
+    "title": "A postcard collection of Ukrainian cities",
+    "align": "left",
+    "mt": "md:mt-5 xl:mt-[70px]",
+    "speed": -0.12
+  }
+}

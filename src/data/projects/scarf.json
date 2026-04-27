@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 12,
+    "image": "../../assets/projects/scarf/preview.png",
+    "category": "Illustration",
+    "client": "Passion project",
+    "title": "A fundraising scarf for a friend in the army",
+    "align": "right",
+    "mt": "md:mt-41 lg:mt-[224px] xl:mt-[120px]",
+    "speed": 0.3
+  }
+}

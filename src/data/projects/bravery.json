@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 9,
+    "image": "../../assets/projects/bravery/preview.png",
+    "category": "Illustration",
+    "client": "Passion project",
+    "title": "An illustration series celebrating Ukrainian bravery",
+    "align": "left",
+    "mt": "md:mt-41 lg:mt-[60px] xl:mt-[270px]",
+    "speed": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "preview": {
+    "order": 5,
+    "image": "../../assets/projects/zoca/preview.png",
+    "category": "visual identity",
+    "client": "Zoca",
+    "title": "An AI-powered beauty & wellness marketing startup",
+    "align": "left",
+    "mt": "md:mt-48 lg:mt-[348px] xl:mt-[466px]",
+    "speed": 0.08
+  }
+}
