@@ -15,12 +15,13 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
   <!-- Mobile: single column -->
   <div class="flex flex-col gap-8 md:hidden">
     {
-      projects.map(({ data: { preview: project } }) => (
+      projects.map(({ id, data: { preview: project } }) => (
         <ProjectCard
           image={project.image}
           category={project.category}
           client={project.client}
           title={project.title}
+          id={id}
         />
       ))
     }
@@ -30,12 +31,13 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
   <div class="hidden md:grid md:grid-cols-2" id="projects-grid">
     <div class="flex flex-col">
       {
-        leftColumn.map(({ data: { preview: project } }) => (
+        leftColumn.map(({ id, data: { preview: project } }) => (
           <ProjectCard
             image={project.image}
             category={project.category}
             client={project.client}
             title={project.title}
+            id={id}
             align={project.align}
             mt={project.mt}
             class="parallax-card"
@@ -46,12 +48,13 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
     </div>
     <div class="flex flex-col">
       {
-        rightColumn.map(({ data: { preview: project } }) => (
+        rightColumn.map(({ id, data: { preview: project } }) => (
           <ProjectCard
             image={project.image}
             category={project.category}
             client={project.client}
             title={project.title}
+            id={id}
             align={project.align}
             mt={project.mt}
             class="parallax-card"

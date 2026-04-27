@@ -9,6 +9,7 @@ interface Props {
   category: string
   client: string
   title: string
+  id: string
   align?: Align
   mt?: string
   class?: string
@@ -20,6 +21,7 @@ const {
   category,
   client,
   title,
+  id,
   align = 'left',
   mt = '',
   class: className = '',
@@ -35,7 +37,8 @@ const alignClasses: Record<Align, string> = {
 }
 ---
 
-<div
+<a
+  href={`/${id}`}
   class={clsx(
     'bg-white flex flex-col gap-4 lg:gap-5 overflow-hidden md:w-64 lg:w-90 xl:w-125 aspect-5/6',
     alignClasses[align],
@@ -61,4 +64,4 @@ const alignClasses: Record<Align, string> = {
       {title}
     </p>
   </div>
-</div>
+</a>

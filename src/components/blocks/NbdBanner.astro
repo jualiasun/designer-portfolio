@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+import nbdLogo from '../../assets/nbd-logo.svg'
+import clsx from 'clsx'
+
+interface Props {
+  projectName: string
+  team: string[]
+}
+
+const { projectName, team } = Astro.props
+---
+
+<section
+  class={clsx(
+    'm-4 md:m-13',
+    'grid grid-cols-[repeat(2,auto)] md:grid-cols-[auto_1fr_auto]  gap-x-11 items-center', //md:grid-rows-[repeat(2,auto)]
+    'rounded-md md:rounded-3xl',
+    'px-3 pt-3 pb-6 md:px-[54px] md:py-[50px]',
+    'text-white',
+    'bg-[url("/images/nbd-banner-sm.jpg")] md:bg-[url("/images/nbd-banner-lg.jpg")]',
+    'bg-cover bg-center',
+  )}
+>
+  <Image src={nbdLogo} alt="NBD logo" class="w-22 md:w-25" />
+  <p class="text-sm md:text-[20px] whitespace-nowrap max-md:col-start-2">
+    noboringdesign.com
+  </p>
+  <p
+    class="text-[20px] md:text-[43px] font-medium leading-[1.12] max-md:mt-6 max-md:mb-4.5 max-md:col-start-2 md:col-span-2 md:order-1 md:[align-self:end]"
+  >
+    Built with the Noboringdesign crew.
+  </p>
+  <div
+    class="text-[10px] md:text-base leading-[1.63] max-md:col-start-2 md:row-span-2 md:[align-self:start]"
+  >
+    <p>Project: {projectName}</p>
+    <p>My Role: Lead Designer</p>
+    <p>The Team:</p>
+    <ul class="list-disc ms-[15px] md:ms-[24px] mt-5 md:mt-6">
+      {team.map((member) => <li>{member}</li>)}
+    </ul>
+  </div>
+</section>

@@ -111,6 +111,16 @@
         "type": "padded-media",
         "files": ["../assets/projects/exitfive/13.jpg"],
         "breakpoints": ["md"]
+      },
+      {
+        "type": "nbd-banner",
+        "breakpoints": ["sm", "md"],
+        "projectName": "Visual Identity for Exitfive",
+        "team": [
+          "Creative Direction: Alina Shupikova",
+          "Web & Quality Control: Juan Pablo Lopez",
+          "Motion Design: Leonel Carreras"
+        ]
       }
     ]
   },
