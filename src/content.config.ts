@@ -5,7 +5,7 @@ import { z } from 'astro/zod'
 const breakpoints = z.array(z.enum(['sm', 'md'])).default(['sm', 'md'])
 
 const projects = defineCollection({
-  loader: glob({ pattern: '**/*.json', base: './src/data/projects' }),
+  loader: glob({ pattern: '*.json', base: './src/data/projects' }),
   schema: ({ image }) =>
     z.object({
       preview: z.object({
