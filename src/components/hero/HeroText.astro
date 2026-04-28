@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<div class:list={['flex flex-col gap-y-2', className]}>
+  <h3 class="font-bold text-lg 2xl:text-2xl">Shaping Things That Matter</h3>
+  <p class="text-sm 2xl:text-xl">
+    I'm not into safe design. I focus on strong concepts, visual impact, and
+    work that stands out for the right reasons. I mix illustration, typography,
+    and bold compositions to shape ideas, with experience across SaaS and tech
+    where clarity still matters.
+  </p>
+</div>

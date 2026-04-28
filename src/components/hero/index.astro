@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets'
+import avatar from '../../assets/intro/avatar.png'
+import arrowDown from '../../assets/intro/arrow.svg'
+import HeroText from './HeroText.astro'
+---
+
+<section
+  class:list={[
+    'bg-deep-black relative text-deep-black',
+    'pt-[calc(var(--header-height)+24px)]',
+  ]}
+>
+  <div class="pt-8 lg:pt-18 xl:pt-30">
+    <Image
+      src={avatar}
+      alt=""
+      class="w-25 md:w-30 lg:w-40 rotate-2 sm:-rotate-6 mx-auto relative max-sm:z-10"
+    />
+    <div
+      class:list={[
+        'relative',
+        '-mt-20 lg:-mt-42 2xl:-mt-62',
+        'bg-no-repeat',
+        'bg-[url("/images/intro/mobile-3.png")] bg-size-[100%] bg-bottom',
+        'sm:bg-[url("/images/intro/desktop.png")] sm:bg-size-[auto_120%] sm:bg-position-[top_35%_center]',
+        'lg:bg-size-[120%] lg:bg-bottom-left',
+        'sm:flex sm:items-end gap-x-8 xl:gap-x-12',
+        'px-4 md:px-6 xl:px-14 2xl:px-20',
+        'pb-10 min-[440px]:pb-16 min-[440px]:pt-[25vw] sm:pb-14 pt-[30vw] sm:pt-[16vw]',
+      ]}
+    >
+      <h1
+        class:list={[
+          'font-boldonse uppercase whitespace-nowrap max-sm:text-center',
+          'text-[15vw] sm:text-[58px] md:text-[80px] lg:text-[110px] xl:text-[140px] 2xl:text-[180px]',
+          'relative top-[1vw] 2xl:top-[1.5vw]',
+        ]}
+      >
+        My work
+      </h1>
+      <HeroText class="max-sm:hidden" />
+      <button
+        class:list={[
+          'bg-mystery-purple rounded-full size-12.5 lg:size-20 flex items-center justify-center',
+          'absolute -bottom-[30px] lg:-bottom-[40px] left-1/2 -translate-x-1/2 cursor-pointer animate-bounce',
+        ]}
+      >
+        <Image src={arrowDown} alt="Down" />
+      </button>
+    </div>
+    <div class="sm:hidden bg-paper-white px-4 pb-6 pt-10">
+      <HeroText />
+    </div>
+  </div>
+</section>
