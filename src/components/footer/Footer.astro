@@ -1,6 +1,7 @@
 ---
 import clsx from 'clsx'
 import FooterLink from './FooterLink.astro'
+import { externalLinks } from '../../data/links'
 ---
 
 <footer
@@ -37,14 +38,12 @@ import FooterLink from './FooterLink.astro'
       <div
         class="flex flex-col items-start md:items-stretch md:flex-row gap-y-3 gap-x-4"
       >
-        <FooterLink href="https://www.linkedin.com/in/yuliiaolomska"
-          >Linkedin</FooterLink
-        >
-        <FooterLink href="mailto:juliaolomska@gmail.com">Email</FooterLink>
+        <FooterLink href={externalLinks.linkedin}>Linkedin</FooterLink>
+        <FooterLink href={externalLinks.email}>Email</FooterLink>
       </div>
     </div>
     <FooterLink
-      href="https://www.instagram.com/jualiasun"
+      href={externalLinks.instagram}
       variant="secondary"
       className="inline-block max-md:mt-3">Instagram</FooterLink
     >

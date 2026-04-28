@@ -1,12 +1,13 @@
 ---
 import clsx from 'clsx'
+import { externalLinks } from '../data/links'
 ---
 
 <header class="sticky top-6 z-50 px-4 md:px-6 xl:px-14 2xl:px-20">
   <div
     class={clsx(
       'rounded-[60px] md:rounded-[18px] lg:rounded-[28px] h-(--header-height) flex max-md:flex-col items-center justify-center text-paper-white bg-deep-black/50 backdrop-blur-md',
-      'md:grid md:grid-cols-[1fr_auto_1fr] md:px-6 lg:px-14',
+      'md:grid md:grid-cols-[1fr_auto_1fr] md:px-6 lg:px-14 xl:px-20',
     )}
   >
     <a
@@ -26,7 +27,7 @@ import clsx from 'clsx'
     </h1>
     <p class="text-[10px] md:hidden">Giving shape to thought.</p>
     <a
-      href="https://www.linkedin.com/in/yuliiaolomska"
+      href={externalLinks.linkedin}
       target="_blank"
       rel="noopener noreferrer"
       class="max-md:hidden group bg-bold-green/20 hover:bg-bold-green rounded-md px-2.5 h-8 flex items-center gap-1.5 transition-colors md:justify-self-end"

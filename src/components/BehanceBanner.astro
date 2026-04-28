@@ -1,0 +1,74 @@
+---
+import { externalLinks } from '../data/links'
+---
+
+<section
+  class:list={[
+    'relative',
+    'bg-mystery-purple rounded-xl max-md:pt-18 flex flex-col items-center gap-y-2',
+    'p-6 mt-15',
+    'md:py-4 md:pr-8 md:pl-36 md:flex-row md:justify-between',
+    'lg:py-6 lg:pr-12 lg:pl-54',
+    'xl:pr-16 xl:pl-78 xl:py-9 mt-25',
+  ]}
+>
+  <div
+    class:list={[
+      'text-deep-black -rotate-7 rounded-full border border-deep-black content-center text-center',
+      'absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[45%]',
+      'md:left-4 md:translate-x-0 md:-translate-y-1/2',
+      'text-xs size-27',
+      'lg:text-lg lg:size-40 lg:left-6',
+      'xl:text-3xl xl:size-57 xl:left-9',
+    ]}
+  >
+    want to<br />see more?
+  </div>
+  <div
+    class:list={[
+      'max-md:text-center leading-[1.36]',
+      'text-deep-black font-medium',
+      'text-2xl',
+      'md:text-lg',
+      'lg:text-3xl',
+      'xl:text-[40px]',
+    ]}
+  >
+    Explore My Work<br />on Behance
+  </div>
+  <div
+    class:list={[
+      'hidden md:flex items-center flex-1 opacity-50 text-deep-black',
+      'ml-2 mr-6 lg:ml-4 lg:mr-10 xl:ml-6 xl:mr-15',
+    ]}
+    aria-hidden="true"
+  >
+    <div class="flex-1 h-0.5 bg-current"></div>
+    <svg
+      class="shrink-0 -ml-[7px]"
+      width="9"
+      height="15"
+      viewBox="0 0 9 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8.70711 8.07088C9.09763 7.68035 9.09763 7.04719 8.70711 6.65666L2.34315 0.292702C1.95262 -0.0978227 1.31946 -0.0978227 0.928932 0.292702C0.538408 0.683226 0.538408 1.31639 0.928932 1.70692L6.58579 7.36377L0.928932 13.0206C0.538408 13.4111 0.538408 14.0443 0.928932 14.4348C1.31946 14.8254 1.95262 14.8254 2.34315 14.4348L8.70711 8.07088Z"
+        fill="currentColor"></path>
+    </svg>
+  </div>
+  <a
+    href={externalLinks.behance}
+    target="_blank"
+    rel="noopener noreferrer"
+    class:list={[
+      'bg-deep-black text-bold-green hover:text-deep-black hover:bg-brave-red transition-colors',
+      'content-center',
+      'h-9 text-lg px-4 rounded-lg',
+      'lg:h-14 lg:text-2xl lg:px-6 lg:rounded-xl',
+      'xl:h-20 xl:text-4xl xl:px-8 xl:rounded-2xl',
+    ]}
+  >
+    View Work
+  </a>
+</section>
