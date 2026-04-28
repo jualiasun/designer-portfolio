@@ -36,6 +36,7 @@ const projects = defineCollection({
                 .default('none'),
               aspect: z.string().optional(),
               overlayImage: image().optional(),
+              playWithSound: z.boolean().default(false),
             }),
             z.object({
               type: z.literal('text'),

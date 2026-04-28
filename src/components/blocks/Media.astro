@@ -1,7 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro'
 import { Image } from 'astro:assets'
-import clsx from 'clsx'
 
 type FileItem = ImageMetadata | string
 
@@ -12,20 +11,27 @@ interface Props {
   padding?: Padding
   aspect?: string
   overlayImage?: ImageMetadata
+  playWithSound?: boolean
 }
 
-const { files, padding = 'none', aspect, overlayImage } = Astro.props
+const {
+  files,
+  padding = 'none',
+  aspect,
+  overlayImage,
+  playWithSound = false,
+} = Astro.props
 
 const isCustomPadding = typeof padding === 'object'
 const isPadded = padding === 'default' || isCustomPadding
 
-const containerClass = clsx(
+const containerClasses = [
   'relative flex flex-col',
   isPadded && 'gap-x-10 md:flex-row',
   padding === 'default' && 'md:p-15',
   isCustomPadding &&
     'md:px-[var(--media-padding-inline)] md:py-[var(--media-padding-block)]',
-)
+]
 
 const containerStyle = isCustomPadding
   ? `--media-padding-inline: ${padding.inline ?? '0'}; --media-padding-block: ${padding.block ?? '0'};`
@@ -34,13 +40,13 @@ const containerStyle = isCustomPadding
 const mediaClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
 ---
 
-<section class={containerClass} style={containerStyle}>
+<section class:list={containerClasses} style={containerStyle}>
   {
     files.map((file) =>
       typeof file === 'string' ? (
         aspect ? (
           <div
-            class={clsx('overflow-hidden', mediaClass)}
+            class:list={['overflow-hidden', mediaClass]}
             style={`aspect-ratio: ${aspect}`}
           >
             <video
@@ -49,7 +55,11 @@ const mediaClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
               loop
               muted
               playsinline
-              class="size-full object-cover"
+              data-play-with-sound={playWithSound ? '' : null}
+              class:list={[
+                'size-full object-cover',
+                playWithSound && '[@media(hover:hover)]:cursor-none',
+              ]}
             />
           </div>
         ) : (
@@ -59,7 +69,11 @@ const mediaClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
             loop
             muted
             playsinline
-            class={mediaClass}
+            data-play-with-sound={playWithSound ? '' : null}
+            class:list={[
+              mediaClass,
+              playWithSound && '[@media(hover:hover)]:cursor-none',
+            ]}
           />
         )
       ) : (
@@ -77,3 +91,109 @@ const mediaClass = isPadded ? 'flex-1 min-w-0' : 'w-full'
     )
   }
 </section>
+
+{
+  playWithSound && (
+    <template data-play-with-sound-cursor>
+      <div
+        class="group pointer-events-none fixed left-0 top-0 z-100 size-39 opacity-0 transition-opacity duration-150 will-change-transform data-visible:opacity-100"
+        aria-hidden="true"
+      >
+        <div class="relative size-full content-center transition-transform duration-100 ease-out group-data-pressing:scale-90">
+          <svg
+            class="absolute inset-0 size-full overflow-visible"
+            viewBox="0 0 214 214"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="fill-mystery-purple group-data-unmuted:fill-transparent group-data-unmuted:stroke-paper-white group-data-unmuted:stroke-4"
+              d="M214 107C214 166.094 166.094 214 107 214C47.9055 214 0 166.094 0 107C0 47.9055 47.9055 0 107 0C166.094 0 214 47.9055 214 107Z"
+            />
+            <path
+              class="fill-paper-white"
+              d="M180.83 109.14L70.0852 173.079L70.0852 45.2013L180.83 109.14Z"
+            />
+          </svg>
+
+          <div class="text-deep-black relative text-left text-sm leading-[0.89] left-15 top-0.5 group-data-unmuted:hidden">
+            unmute
+            <br />
+            me
+          </div>
+          <div class="text-deep-black relative hidden text-left text-sm leading-[0.89] left-15 top-0.5 group-data-unmuted:block">
+            mute
+            <br />
+            me
+          </div>
+        </div>
+      </div>
+    </template>
+  )
+}
+
+<script>
+  const videos = document.querySelectorAll<HTMLVideoElement>(
+    'video[data-play-with-sound]',
+  )
+
+  if (videos.length > 0) {
+    videos.forEach((video) => {
+      video.addEventListener('click', () => {
+        video.muted = !video.muted
+      })
+    })
+
+    const template = document.querySelector<HTMLTemplateElement>(
+      'template[data-play-with-sound-cursor]',
+    )
+
+    if (template && window.matchMedia('(hover: hover)').matches) {
+      const cursor = template.content.firstElementChild!.cloneNode(
+        true,
+      ) as HTMLDivElement
+      document.body.appendChild(cursor)
+
+      let rafId = 0
+      let pendingX = 0
+      let pendingY = 0
+
+      const updatePosition = () => {
+        cursor.style.transform = `translate3d(${pendingX}px, ${pendingY}px, 0) translate(-50%, -50%)`
+        rafId = 0
+      }
+
+      const onMove = (e: MouseEvent) => {
+        pendingX = e.clientX
+        pendingY = e.clientY
+        if (!rafId) rafId = requestAnimationFrame(updatePosition)
+      }
+
+      const syncMuteState = (video: HTMLVideoElement) => {
+        cursor.toggleAttribute('data-unmuted', !video.muted)
+      }
+
+      const endPress = () => cursor.toggleAttribute('data-pressing', false)
+      document.addEventListener('mouseup', endPress)
+
+      videos.forEach((video) => {
+        video.addEventListener('mouseenter', () => {
+          document.addEventListener('mousemove', onMove)
+          cursor.toggleAttribute('data-visible', true)
+          syncMuteState(video)
+        })
+        video.addEventListener('mouseleave', () => {
+          document.removeEventListener('mousemove', onMove)
+          cursor.toggleAttribute('data-visible', false)
+          endPress()
+        })
+        video.addEventListener('mousedown', () => {
+          cursor.toggleAttribute('data-pressing', true)
+        })
+        video.addEventListener('click', () => {
+          syncMuteState(video)
+        })
+      })
+    }
+  }
+</script>

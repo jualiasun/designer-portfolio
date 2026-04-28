@@ -8,5 +8,48 @@
     "align": "right",
     "mt": "md:mt-5 xl:mt-[80px]",
     "speed": 0.1
-  }
+  },
+  "blocks": [
+    {
+      "type": "media",
+      "files": ["/projects/allo-fiber/1.mp4"],
+      "playWithSound": true
+    },
+    {
+      "type": "media",
+      "files": ["/projects/allo-fiber/2.mp4"],
+      "padding": "default"
+    },
+    {
+      "type": "text",
+      "title": "Allo Fiber TV Campaign",
+      "text": "Allo Fiber launched a TV campaign to promote its initiative supporting schools, donating $50 for every new customer who signed up.\nThe team created a warm, vibrant video using hand-drawn illustrations and playful animation to tell the story and inspire participation. The campaign reinforced Allo Fiber’s commitment to local communities.\nMy role was to shape the video flow, animate selected scenes, and create the full illustration style.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/allo-fiber/3.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/allo-fiber/3-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/allo-fiber/4-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "nbd-banner",
+      "breakpoints": ["sm", "md"],
+      "projectName": "Television Ad for Allo Fiber",
+      "team": [
+        "Creative Direction: Juan Pablo Lopez",
+        "Motion: Thomas Girometti"
+      ]
+    }
+  ]
 }
