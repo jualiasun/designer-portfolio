@@ -86,13 +86,13 @@ const CANONICAL_LOOP = 1
 
         if (!wrapping) {
           const sl = carousel.scrollLeft
-          if (sl < copyWidth * 0.5) {
+          if (sl < copyWidth) {
             wrapping = true
             carousel.scrollLeft = sl + copyWidth
             requestAnimationFrame(() => {
               wrapping = false
             })
-          } else if (sl > copyWidth * 2.5) {
+          } else if (sl > copyWidth * 2) {
             wrapping = true
             carousel.scrollLeft = sl - copyWidth
             requestAnimationFrame(() => {
