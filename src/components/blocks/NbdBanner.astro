@@ -5,10 +5,11 @@ import clsx from 'clsx'
 
 interface Props {
   projectName: string
+  role: string
   team: string[]
 }
 
-const { projectName, team } = Astro.props
+const { projectName, role, team } = Astro.props
 ---
 
 <section
@@ -35,7 +36,7 @@ const { projectName, team } = Astro.props
     class="text-[10px] md:text-base leading-[1.63] max-md:col-start-2 md:row-span-2 md:[align-self:start]"
   >
     <p>Project: {projectName}</p>
-    <p>My Role: Lead Designer</p>
+    <p>My Role: {role}</p>
     <p>The Team:</p>
     <ul class="list-disc ms-[15px] md:ms-[24px] mt-5 md:mt-6">
       {team.map((member) => <li>{member}</li>)}

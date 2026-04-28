@@ -46,7 +46,11 @@ const bpClass = [
   }
   {
     block.type === 'nbd-banner' && (
-      <NbdBanner projectName={block.projectName} team={block.team} />
+      <NbdBanner
+        projectName={block.projectName}
+        role={block.role}
+        team={block.team}
+      />
     )
   }
 </div>

@@ -50,6 +50,7 @@ const projects = defineCollection({
               type: z.literal('nbd-banner'),
               breakpoints,
               projectName: z.string(),
+              role: z.string().default('Lead Designer'),
               team: z.array(z.string()),
             }),
           ]),
