@@ -12,64 +12,63 @@ const leftColumn = projects.filter((_, i) => i % 2 === 0)
 const rightColumn = projects.filter((_, i) => i % 2 === 1)
 ---
 
-<section
-  id="projects"
-  class="bg-paper-white px-4 md:px-12 xl:px-20 2xl:px-35 py-12"
->
-  <!-- Mobile: single column -->
-  <div class="flex flex-col gap-8 md:hidden">
-    {
-      projects.map(({ id, data: { preview: project } }) => (
-        <ProjectCard
-          image={project.image}
-          category={project.category}
-          client={project.client}
-          title={project.title}
-          id={id}
-          class="w-full"
-          scaleText
-        />
-      ))
-    }
-  </div>
-
-  <!-- Desktop: 2-column staggered layout with parallax -->
-  <div class="hidden md:grid md:grid-cols-2" id="projects-grid">
-    <div class="flex flex-col">
+<section id="projects" class="bg-paper-white px-page py-12">
+  <div class="2xl:px-16">
+    <!-- Mobile: single column -->
+    <div class="flex flex-col gap-8 md:hidden">
       {
-        leftColumn.map(({ id, data: { preview: project } }) => (
+        projects.map(({ id, data: { preview: project } }) => (
           <ProjectCard
             image={project.image}
             category={project.category}
             client={project.client}
             title={project.title}
             id={id}
-            align={project.align}
-            mt={project.mt}
-            class="parallax-card"
-            data-speed={project.speed}
+            class="w-full"
             scaleText
           />
         ))
       }
     </div>
-    <div class="flex flex-col">
-      {
-        rightColumn.map(({ id, data: { preview: project } }) => (
-          <ProjectCard
-            image={project.image}
-            category={project.category}
-            client={project.client}
-            title={project.title}
-            id={id}
-            align={project.align}
-            mt={project.mt}
-            class="parallax-card"
-            data-speed={project.speed}
-            scaleText
-          />
-        ))
-      }
+
+    <!-- Desktop: 2-column staggered layout with parallax -->
+    <div class="hidden md:grid md:grid-cols-2" id="projects-grid">
+      <div class="flex flex-col">
+        {
+          leftColumn.map(({ id, data: { preview: project } }) => (
+            <ProjectCard
+              image={project.image}
+              category={project.category}
+              client={project.client}
+              title={project.title}
+              id={id}
+              align={project.align}
+              mt={project.mt}
+              class="parallax-card"
+              data-speed={project.speed}
+              scaleText
+            />
+          ))
+        }
+      </div>
+      <div class="flex flex-col">
+        {
+          rightColumn.map(({ id, data: { preview: project } }) => (
+            <ProjectCard
+              image={project.image}
+              category={project.category}
+              client={project.client}
+              title={project.title}
+              id={id}
+              align={project.align}
+              mt={project.mt}
+              class="parallax-card"
+              data-speed={project.speed}
+              scaleText
+            />
+          ))
+        }
+      </div>
     </div>
   </div>
   <BehanceBanner />

@@ -1,5 +1,22 @@
 @import 'tailwindcss';
 
+@utility px-page {
+  padding-inline: --spacing(4);
+
+  @media (width >= 48rem) {
+    padding-inline: --spacing(8);
+  }
+  @media (width >= 64rem) {
+    padding-inline: --spacing(12);
+  }
+  @media (width >= 80rem) {
+    padding-inline: --spacing(14);
+  }
+  @media (width >= 96rem) {
+    padding-inline: --spacing(20);
+  }
+}
+
 @theme inline {
   --font-aktiv-grotesk: var(--font-aktiv-grotesk);
   --font-boldonse: var(--font-boldonse);
