@@ -1,0 +1,50 @@
+---
+import clsx from 'clsx'
+import FooterLink from './FooterLink.astro'
+---
+
+<footer
+  class={clsx(
+    'relative',
+    "bg-[url('/images/footer/hand-flower.png')] bg-no-repeat",
+    'bg-position-[right_-80px_bottom_-85px] sm:bg-position-[right_-10%_bottom_-55px] md:bg-position-[bottom_-20px_center] xl:bg-bottom',
+    'bg-size-[90%] min-[480px]:bg-size-[80%] sm:bg-size-[55%] md:bg-size-[40%]',
+    'max-sm:min-h-screen',
+    'p-4 pb-40 sm:pb-60 md:p-8 md:pb-18 lg:px-12 lg:py-30 xl:px-14 xl:pb-40 2xl:px-20',
+  )}
+>
+  <div
+    class="max-md:hidden md:block w-1/2 h-full absolute top-0 left-1/2 bg-[url('/images/footer/footer-bg.png')] bg-cover bg-center -z-1"
+  >
+  </div>
+  <div
+    class="text-paper-white text-[54px] lg:text-[60px] xl:text-[80px] 2xl:text-[115px] font-boldonse uppercase max-md:mb-4 md:max-w-[40%]"
+  >
+    Plant an Idea,
+  </div>
+  <div
+    class="text-bold-green text-[54px] lg:text-[60px] xl:text-[80px] 2xl:text-[115px] font-boldonse uppercase max-md:mb-10 md:max-w-[40%] md:ml-auto lg:-mt-10"
+  >
+    Watch it Grow
+  </div>
+  <div class="md:flex justify-between items-end">
+    <div>
+      <p
+        class="text-paper-white text-xl md:text-base lg:text-2xl xl:text-3xl max-w-45 md:max-w-36 lg:max-w-60 xl:max-w-66 mb-3 md:mb-5 lg:mb-7 xl:mb-10"
+      >
+        Send me an email or a DM — let’s see where it takes us.
+      </p>
+      <div
+        class="flex flex-col items-start md:items-stretch md:flex-row gap-y-3 gap-x-4"
+      >
+        <FooterLink href="https://www.linkedin.com">Linkedin</FooterLink>
+        <FooterLink href="mailto:yuliia@example.com">Email</FooterLink>
+      </div>
+    </div>
+    <FooterLink
+      href="https://www.instagram.com"
+      variant="secondary"
+      className="inline-block max-md:mt-3">Instagram</FooterLink
+    >
+  </div>
+</footer>
