@@ -40,14 +40,17 @@ import HeroText from './HeroText.astro'
         My work
       </h1>
       <HeroText class="max-sm:hidden" />
-      <button
+      <a
+        href="/#projects"
+        data-projects-link
+        aria-label="My work"
         class:list={[
           'bg-mystery-purple rounded-full size-12.5 lg:size-20 flex items-center justify-center',
           'absolute -bottom-[30px] lg:-bottom-[40px] left-1/2 -translate-x-1/2 cursor-pointer animate-bounce',
         ]}
       >
         <Image src={arrowDown} alt="Down" />
-      </button>
+      </a>
     </div>
     <div class="sm:hidden bg-paper-white px-4 pb-6 pt-10">
       <HeroText />

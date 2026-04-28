@@ -10,8 +10,8 @@ import clsx from 'clsx'
     )}
   >
     <a
-      id="projects-link"
       href="/#projects"
+      data-projects-link
       class="max-md:hidden uppercase text-sm lg:text-base xl:text-lg md:justify-self-start"
     >
       My work
@@ -50,18 +50,20 @@ import clsx from 'clsx'
 </header>
 
 <script>
-  const link = document.getElementById(
-    'projects-link',
-  ) as HTMLAnchorElement | null
+  const links = document.querySelectorAll<HTMLAnchorElement>(
+    '[data-projects-link]',
+  )
 
-  link?.addEventListener('click', (event) => {
-    if (window.location.pathname !== '/') return
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (window.location.pathname !== '/') return
 
-    const target = document.getElementById('projects')
-    if (!target) return
+      const target = document.getElementById('projects')
+      if (!target) return
 
-    event.preventDefault()
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    history.replaceState(null, '', '#projects')
+      event.preventDefault()
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      history.replaceState(null, '', '#projects')
+    })
   })
 </script>
