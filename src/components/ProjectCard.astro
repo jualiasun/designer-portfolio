@@ -1,10 +1,10 @@
 ---
 import { Image } from 'astro:assets'
-import clsx from 'clsx'
+import type { HTMLAttributes } from 'astro/types'
 
 type Align = 'left' | 'right' | 'indented-left' | 'indented-right'
 
-interface Props {
+interface Props extends Omit<HTMLAttributes<'a'>, 'class'> {
   image: ImageMetadata
   category: string
   client: string
@@ -39,12 +39,12 @@ const alignClasses: Record<Align, string> = {
 
 <a
   href={`/${id}`}
-  class={clsx(
+  class:list={[
     'bg-white flex flex-col gap-4 lg:gap-5 overflow-hidden md:w-64 lg:w-90 xl:w-125 aspect-5/6',
     alignClasses[align],
     mt,
     className,
-  )}
+  ]}
   data-speed={dataSpeed}
   {...rest}
 >

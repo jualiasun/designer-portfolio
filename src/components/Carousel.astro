@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content'
+import ProjectCard from './ProjectCard.astro'
+
+const allProjects = await getCollection('projects')
+const projects = allProjects.sort(
+  (a, b) => a.data.preview.order - b.data.preview.order,
+)
+
+// Render the projects three times so that the user can scroll
+// seamlessly in either direction. The middle copy is the canonical
+// one exposed to assistive tech; once the user reaches the outer
+// copies, the script below wraps `scrollLeft` back to the middle
+// without a visible jump.
+const loops = [0, 1, 2] as const
+const CANONICAL_LOOP = 1
+---
+
+<section class="bg-paper-white py-15 md:py-20 lg:py-30">
+  <div
+    class:list={[
+      'carousel relative overflow-x-auto',
+      "[-ms-overflow-style:'none'] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+    ]}
+  >
+    <div
+      class:list={[
+        'carousel-track flex w-max gap-10 pr-10',
+        'animate-[scroll-content_60s_linear_infinite]',
+        'hover:[animation-play-state:paused]',
+        'motion-reduce:animate-none',
+      ]}
+    >
+      {
+        loops.map((loop) =>
+          projects.map(({ id, data: { preview: project } }) => (
+            <ProjectCard
+              image={project.image}
+              category={project.category}
+              client={project.client}
+              title={project.title}
+              id={id}
+              class="shrink-0 w-90 xl:w-125"
+              aria-hidden={loop === CANONICAL_LOOP ? undefined : 'true'}
+              tabindex={loop === CANONICAL_LOOP ? undefined : -1}
+            />
+          )),
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousels = document.querySelectorAll<HTMLElement>('.carousel')
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector<HTMLElement>('.carousel-track')
+    if (!track) return
+
+    let copyWidth = 0
+    let wrapping = false
+    let resumeTimeout: number | undefined
+
+    const measure = () => {
+      copyWidth = track.scrollWidth / 3
+    }
+
+    const center = () => {
+      if (copyWidth > 0) carousel.scrollLeft = copyWidth
+    }
+
+    const onScroll = () => {
+      if (copyWidth === 0) return
+
+      if (!wrapping) {
+        const sl = carousel.scrollLeft
+        if (sl < copyWidth * 0.5) {
+          wrapping = true
+          carousel.scrollLeft = sl + copyWidth
+          requestAnimationFrame(() => {
+            wrapping = false
+          })
+        } else if (sl > copyWidth * 2.5) {
+          wrapping = true
+          carousel.scrollLeft = sl - copyWidth
+          requestAnimationFrame(() => {
+            wrapping = false
+          })
+        }
+      }
+
+      // Pause the CSS auto-scroll while the user is actively scrolling
+      // so the manual interaction isn't fighting the animation.
+      track.style.animationPlayState = 'paused'
+      window.clearTimeout(resumeTimeout)
+      resumeTimeout = window.setTimeout(() => {
+        track.style.animationPlayState = ''
+      }, 600)
+    }
+
+    carousel.addEventListener('scroll', onScroll, { passive: true })
+
+    const ro = new ResizeObserver(() => {
+      measure()
+      center()
+    })
+    ro.observe(track)
+
+    // Wait two frames so layout (images, fonts) has settled before
+    // measuring and centering on the middle copy.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        measure()
+        center()
+      })
+    })
+  })
+</script>

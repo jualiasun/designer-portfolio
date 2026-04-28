@@ -22,3 +22,12 @@
     --header-height: 84px;
   }
 }
+
+@keyframes scroll-content {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-100% / 3), 0, 0);
+  }
+}
