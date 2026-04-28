@@ -73,10 +73,7 @@
     {
       "type": "media",
       "padding": "default",
-      "files": [
-        "../../assets/projects/exitfive/8.jpg",
-        "/projects/exitfive/9.mp4"
-      ]
+      "files": ["/projects/exitfive/8.mp4", "/projects/exitfive/9.mp4"]
     },
     { "type": "media", "files": ["../../assets/projects/exitfive/10.jpg"] },
     {
