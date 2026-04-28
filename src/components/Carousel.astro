@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
 import ProjectCard from './ProjectCard.astro'
+import sliderBird from '../assets/slider-bird.png'
 
 const allProjects = await getCollection('projects')
 const projects = allProjects.sort(
@@ -32,88 +34,88 @@ const CANONICAL_LOOP = 1
       ]}
     >
       {
-        loops.map((loop) =>
-          projects.map(({ id, data: { preview: project } }) => (
-            <ProjectCard
-              image={project.image}
-              category={project.category}
-              client={project.client}
-              title={project.title}
-              id={id}
-              class="shrink-0 w-90 xl:w-125"
+        loops.map((loop) => (
+          <Fragment>
+            <div
+              class="shrink-0 content-center px-2.5 lg:px-40"
               aria-hidden={loop === CANONICAL_LOOP ? undefined : 'true'}
-              tabindex={loop === CANONICAL_LOOP ? undefined : -1}
-            />
-          )),
-        )
+            >
+              <Image
+                src={sliderBird}
+                alt="See more projects"
+                class="block h-auto w-[190px] md:w-64 lg:w-80 xl:w-95"
+              />
+            </div>
+            {projects.map(({ id, data: { preview: project } }) => (
+              <ProjectCard
+                image={project.image}
+                category={project.category}
+                client={project.client}
+                title={project.title}
+                id={id}
+                class="shrink-0 w-90 xl:w-125"
+                aria-hidden={loop === CANONICAL_LOOP ? undefined : 'true'}
+                tabindex={loop === CANONICAL_LOOP ? undefined : -1}
+              />
+            ))}
+          </Fragment>
+        ))
       }
     </div>
   </div>
 </section>
 
 <script>
-  const carousels = document.querySelectorAll<HTMLElement>('.carousel')
+  const carousel = document.querySelector<HTMLElement>('.carousel')
+  const track = carousel?.querySelector<HTMLElement>('.carousel-track')
 
-  carousels.forEach((carousel) => {
-    const track = carousel.querySelector<HTMLElement>('.carousel-track')
-    if (!track) return
-
+  if (carousel && track) {
     let copyWidth = 0
     let wrapping = false
     let resumeTimeout: number | undefined
 
     const measure = () => {
       copyWidth = track.scrollWidth / 3
-    }
-
-    const center = () => {
       if (copyWidth > 0) carousel.scrollLeft = copyWidth
     }
 
-    const onScroll = () => {
-      if (copyWidth === 0) return
+    carousel.addEventListener(
+      'scroll',
+      () => {
+        if (copyWidth === 0) return
 
-      if (!wrapping) {
-        const sl = carousel.scrollLeft
-        if (sl < copyWidth * 0.5) {
-          wrapping = true
-          carousel.scrollLeft = sl + copyWidth
-          requestAnimationFrame(() => {
-            wrapping = false
-          })
-        } else if (sl > copyWidth * 2.5) {
-          wrapping = true
-          carousel.scrollLeft = sl - copyWidth
-          requestAnimationFrame(() => {
-            wrapping = false
-          })
+        if (!wrapping) {
+          const sl = carousel.scrollLeft
+          if (sl < copyWidth * 0.5) {
+            wrapping = true
+            carousel.scrollLeft = sl + copyWidth
+            requestAnimationFrame(() => {
+              wrapping = false
+            })
+          } else if (sl > copyWidth * 2.5) {
+            wrapping = true
+            carousel.scrollLeft = sl - copyWidth
+            requestAnimationFrame(() => {
+              wrapping = false
+            })
+          }
         }
-      }
 
-      // Pause the CSS auto-scroll while the user is actively scrolling
-      // so the manual interaction isn't fighting the animation.
-      track.style.animationPlayState = 'paused'
-      window.clearTimeout(resumeTimeout)
-      resumeTimeout = window.setTimeout(() => {
-        track.style.animationPlayState = ''
-      }, 600)
-    }
+        // Pause the CSS auto-scroll while the user is actively scrolling
+        // so the manual interaction isn't fighting the animation.
+        track.style.animationPlayState = 'paused'
+        window.clearTimeout(resumeTimeout)
+        resumeTimeout = window.setTimeout(() => {
+          track.style.animationPlayState = ''
+        }, 600)
+      },
+      { passive: true },
+    )
 
-    carousel.addEventListener('scroll', onScroll, { passive: true })
-
-    const ro = new ResizeObserver(() => {
-      measure()
-      center()
-    })
-    ro.observe(track)
+    new ResizeObserver(measure).observe(track)
 
     // Wait two frames so layout (images, fonts) has settled before
     // measuring and centering on the middle copy.
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        measure()
-        center()
-      })
-    })
-  })
+    requestAnimationFrame(() => requestAnimationFrame(measure))
+  }
 </script>
