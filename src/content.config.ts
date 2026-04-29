@@ -27,7 +27,7 @@ const projects = defineCollection({
               files: z.array(z.union([image(), z.string()])).min(1),
               padding: z
                 .union([
-                  z.enum(['none', 'default']),
+                  z.enum(['none', 'default', 'centered-sm', 'centered-lg']),
                   z.object({
                     inline: z.string().optional(),
                     block: z.string().optional(),

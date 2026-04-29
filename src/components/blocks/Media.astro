@@ -4,7 +4,12 @@ import { Image } from 'astro:assets'
 
 type FileItem = ImageMetadata | string
 
-type Padding = 'none' | 'default' | { inline?: string; block?: string }
+type Padding =
+  | 'none'
+  | 'default'
+  | 'centered-sm'
+  | 'centered-lg'
+  | { inline?: string; block?: string }
 
 interface Props {
   files: FileItem[]
@@ -23,12 +28,15 @@ const {
 } = Astro.props
 
 const isCustomPadding = typeof padding === 'object'
-const isPadded = padding === 'default' || isCustomPadding
+const isCentered = padding === 'centered-sm' || padding === 'centered-lg'
+const isPadded = padding === 'default' || isCentered || isCustomPadding
 
 const containerClasses = [
   'relative flex flex-col',
   isPadded && 'gap-x-10 md:flex-row',
-  padding === 'default' && 'md:p-15',
+  (padding === 'default' || isCentered) && 'md:p-15',
+  padding === 'centered-lg' && 'lg:px-[15%]',
+  padding === 'centered-sm' && 'lg:px-[25%]',
   isCustomPadding &&
     'md:px-[var(--media-padding-inline)] md:py-[var(--media-padding-block)]',
 ]

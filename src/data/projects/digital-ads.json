@@ -8,5 +8,64 @@
     "align": "indented-left",
     "mt": "md:mt-25 lg:mt-[150px] xl:mt-[202px]",
     "speed": -0.12
-  }
+  },
+  "blocks": [
+    { "type": "media", "files": ["../../assets/projects/digital-ads/0.jpg"] },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/1.jpg"],
+      "padding": "centered-sm"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/2.jpg"],
+      "padding": "centered-lg"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/3.jpg"],
+      "padding": "centered-sm"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/4.jpg"],
+      "padding": "centered-sm"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/5.jpg"],
+      "padding": "centered-sm"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/6.jpg"],
+      "padding": "centered-sm"
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/digital-ads/7.jpg",
+        "../../assets/projects/digital-ads/8.jpg"
+      ],
+      "padding": "centered-lg"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/9.jpg"],
+      "padding": "centered-sm"
+    },
+    {
+      "type": "media",
+      "files": [
+        "../../assets/projects/digital-ads/10.jpg",
+        "../../assets/projects/digital-ads/11.jpg"
+      ],
+      "padding": "centered-lg"
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/digital-ads/12.jpg"],
+      "padding": "centered-sm"
+    }
+  ]
 }
