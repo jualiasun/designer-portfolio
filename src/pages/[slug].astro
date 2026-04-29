@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { project } = Astro.props
 ---
 
-<Layout title={project.data.preview.title}>
+<Layout title={project.data.preview.title} withTopPadding>
   {project.data.blocks?.map((block) => <Block block={block} />)}
   <Carousel />
 </Layout>
