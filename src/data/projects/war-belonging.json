@@ -8,5 +8,130 @@
     "align": "indented-right",
     "mt": "md:mt-60 lg:mt-[184px] xl:mt-[370px]",
     "speed": 0.2
-  }
+  },
+  "blocks": [
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/1.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/1-sm.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Illustration Collection",
+      "text": "Every illustration here was created to process the devastating events of war in my country. A way to support Ukrainians and express the pain of knowing that life would never be the same."
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/2.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/2.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Two Years of Full-Scale Invasion of Ukraine",
+      "text": "This illustration was built on the grief of realising that it had been two years since the war began. It features a drop in the centre that symbolises both a tear and blood – the sacrifice Ukrainians go through every day to protect their home. At the bottom stands a fortress showing my hometown districts of Saltivka, destroyed by Russian rockets but still holding on.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/3.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/3.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Thank You to My Friends in the Army",
+      "text": "Since the beginning of the war, some of my friends decided to join the army, which created an even deeper connection between us. I helped with small fundraisers and created illustrations to show my appreciation. The soldier is holding the trident, a symbol of Ukraine that he is defending by sacrificing his ordinary life.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/4.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/4.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Nova Kakhovka Dam Catastrophe",
+      "text": "On 6 June, russians bombed the Nova Kakhovka Dam, causing major ecological consequences across the region. Many people’s homes were destroyed, animals were killed, and it became a true act of ecocide.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/5.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/5.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "144 Children",
+      "text": "One of the topics that affected me deeply was the number of children killed by Russians. This illustration represents the lives of those children lost to the war. At that time, the number was 144.",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/6.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/6.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Home",
+      "text": "This illustration is about home – the feeling of being away from it, and the desire to return, while realising it will never be the same. The nostalgic side on the left represents my childhood memories, while the reality on the right was inspired by a recent trip to Kharkiv.\nThis illustration was featured on the official Ukrainian Instagram page – @ukraine.ua",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/7.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/7.jpg"],
+      "breakpoints": ["sm"]
+    },
+    {
+      "type": "text",
+      "title": "Fundraising Scarf",
+      "text": "This scarf designed and illustrated by me was produced in a limited edition of only 10 pieces. It was created to collect money for my classmate who joined the army and needed funds for his brigade. The illustration shows many Ukrainian symbols: flowers – dandelions and irises that were always with me growing up, singing birds, stars, beads and rising sun in the centre as a symbol of hope. The quote of Ukrainian philosopher Hryhorii Skovoroda goes: Love comes from love, reinforcing the idea of giving back.",
+      "variant": "dark",
+      "padding": "compact"
+    }
+  ]
 }
