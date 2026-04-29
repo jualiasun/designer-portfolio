@@ -2,6 +2,8 @@
 import BehanceBanner from './BehanceBanner.astro'
 import ProjectCard from './ProjectCard.astro'
 import { getCollection } from 'astro:content'
+import WebflowRibbon from './ribbon/WebflowRibbon.astro'
+import UkraineRibbon from './ribbon/UkraineRibbon.astro'
 
 const allProjects = await getCollection('projects')
 const projects = allProjects.sort(
@@ -13,7 +15,11 @@ const rightColumn = projects.filter((_, i) => i % 2 === 1)
 ---
 
 <section id="projects" class="bg-paper-white px-page py-12">
-  <div class="2xl:px-16">
+  <div class="2xl:px-16 relative">
+    <div class="absolute -top-12 right-0 flex gap-x-5 max-md:hidden">
+      <UkraineRibbon />
+      <WebflowRibbon />
+    </div>
     <!-- Mobile: single column -->
     <div class="flex flex-col gap-8 md:hidden">
       {

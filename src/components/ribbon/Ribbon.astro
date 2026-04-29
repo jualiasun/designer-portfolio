@@ -1,0 +1,35 @@
+---
+interface Props {
+  color?: string
+  class?: string
+}
+
+const { color = '#ffffff', class: className = '' } = Astro.props
+---
+
+<div class:list={['overflow-hidden px-4 pb-4 -mx-4 -mb-4', className]}>
+  <div class:list={['group w-9 md:w-21']}>
+    <div
+      class:list={[
+        '-translate-y-4 group-hover:translate-y-0 transition-transform duration-300 relative',
+      ]}
+    >
+      <svg
+        class:list={[
+          'w-full',
+          'drop-shadow-[1.714px_1.714px_1.714px_rgba(0,0,0,0.10)]',
+          'md:drop-shadow-[4px_4px_4px_rgba(0,0,0,0.10)]',
+        ]}
+        viewBox="0 0 82 160"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0H82V160L43 132L0 160V0Z" fill={color}></path>
+      </svg>
+      <div
+        class="absolute inset-x-0 top-[60%] -translate-y-1/2 flex justify-center"
+      >
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
