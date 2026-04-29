@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content'
 import Media from './Media.astro'
 import NbdBanner from './NbdBanner.astro'
 import TextContent from './TextContent.astro'
-import clsx from 'clsx'
 
 type ProjectBlock = NonNullable<
   CollectionEntry<'projects'>['data']['blocks']
@@ -22,7 +21,7 @@ const bpClass = [
 ].join(' ')
 ---
 
-<div class={clsx('bg-deep-black', bpClass)}>
+<div class:list={['bg-deep-black', bpClass]}>
   {
     block.type === 'media' && (
       <Media

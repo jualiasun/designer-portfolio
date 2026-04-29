@@ -1,14 +1,13 @@
 ---
-import clsx from 'clsx'
 import { externalLinks } from '../data/links'
 ---
 
 <header class="sticky top-6 z-50 px-page">
   <div
-    class={clsx(
+    class:list={[
       'rounded-[60px] md:rounded-[18px] lg:rounded-[28px] h-(--header-height) flex max-md:flex-col items-center justify-center text-paper-white bg-deep-black/50 backdrop-blur-md',
       'md:grid md:grid-cols-[1fr_auto_1fr] md:px-6 lg:px-14 xl:px-20',
-    )}
+    ]}
   >
     <a
       href="/#projects"

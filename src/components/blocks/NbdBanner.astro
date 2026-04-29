@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets'
 import nbdLogo from '../../assets/nbd-logo.svg'
-import clsx from 'clsx'
 
 interface Props {
   projectName: string
@@ -13,7 +12,7 @@ const { projectName, role, team } = Astro.props
 ---
 
 <section
-  class={clsx(
+  class:list={[
     'm-4 md:m-13',
     'grid grid-cols-[repeat(2,auto)] md:grid-cols-[auto_1fr_auto]  gap-x-11 items-center', //md:grid-rows-[repeat(2,auto)]
     'rounded-md md:rounded-3xl',
@@ -21,7 +20,7 @@ const { projectName, role, team } = Astro.props
     'text-white',
     'bg-[url("/images/nbd-banner-sm.jpg")] md:bg-[url("/images/nbd-banner-lg.jpg")]',
     'bg-cover bg-center',
-  )}
+  ]}
 >
   <Image src={nbdLogo} alt="NBD logo" class="w-22 md:w-25" />
   <p class="text-sm md:text-[20px] whitespace-nowrap max-md:col-start-2">

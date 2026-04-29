@@ -11,9 +11,6 @@ importers:
       astro:
         specifier: ^6.1.7
         version: 6.1.7(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(typescript@5.9.3)
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       sharp:
         specifier: ^0.34.5
         version: 0.34.5

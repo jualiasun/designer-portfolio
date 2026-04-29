@@ -1,18 +1,17 @@
 ---
-import clsx from 'clsx'
 import FooterLink from './FooterLink.astro'
 import { externalLinks } from '../../data/links'
 ---
 
 <footer
-  class={clsx(
+  class:list={[
     'relative',
     "bg-[url('/images/footer/hand-flower.png')] bg-no-repeat",
     'bg-position-[right_-80px_bottom_-85px] sm:bg-position-[right_-10%_bottom_-55px] md:bg-position-[bottom_-20px_center] xl:bg-bottom',
     'bg-size-[90%] min-[480px]:bg-size-[80%] sm:bg-size-[70%] md:bg-size-[40%]',
     'max-sm:min-h-screen',
     'px-page py-4 pb-40 sm:pb-60 md:py-16 lg:pt-20 lg:pb-30 xl:pb-40',
-  )}
+  ]}
 >
   <div
     class="max-md:hidden md:block w-1/2 h-full absolute top-0 left-1/2 bg-[url('/images/footer/footer-bg.png')] bg-cover bg-center -z-1"
