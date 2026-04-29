@@ -35,6 +35,7 @@ const containerClasses = [
   'relative flex flex-col',
   isPadded && 'gap-x-10 md:flex-row',
   (padding === 'default' || isCentered) && 'md:p-15',
+  isCentered && 'max-md:gap-y-10 max-md:px-3 max-md:py-5',
   padding === 'centered-lg' && 'lg:px-[15%]',
   padding === 'centered-sm' && 'lg:px-[25%]',
   isCustomPadding &&
