@@ -16,17 +16,31 @@
       "title": "Project Overview",
       "text": "Exit Five is a community for B2B marketing professionals. While the brand was already well-known, it needed a fresh look to help it stand out from competitors. I created a new visual identity that helps them tell their story in a more unique and memorable way."
     },
-    { "type": "media", "files": ["../../assets/projects/exitfive/2.jpg"] },
     {
       "type": "media",
       "padding": "default",
-      "files": ["/projects/exitfive/3.mp4"],
+      "files": ["../../assets/projects/exitfive/2.jpg"],
+      "breakpoints": ["md"],
+      "ribbon": "webflow"
+    },
+    {
+      "type": "media",
+      "padding": "default",
+      "files": ["../../assets/projects/exitfive/2-sm.jpg"],
+      "breakpoints": ["sm"],
+      "ribbon": "webflow"
+    },
+    { "type": "media", "files": ["../../assets/projects/exitfive/3.jpg"] },
+    {
+      "type": "media",
+      "padding": "default",
+      "files": ["/projects/exitfive/4.mp4"],
       "overlayImage": "../../assets/projects/exitfive/logo.svg",
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["/projects/exitfive/3.mp4"],
+      "files": ["/projects/exitfive/4.mp4"],
       "overlayImage": "../../assets/projects/exitfive/logo.svg",
       "breakpoints": ["sm"],
       "aspect": "4/5"
@@ -38,19 +52,19 @@
       "variant": "dark",
       "padding": "compact"
     },
-    { "type": "media", "files": ["../../assets/projects/exitfive/4.jpg"] },
+    { "type": "media", "files": ["../../assets/projects/exitfive/5.jpg"] },
     {
       "type": "media",
       "padding": "default",
       "files": [
-        "../../assets/projects/exitfive/5.jpg",
-        "/projects/exitfive/6.mp4"
+        "../../assets/projects/exitfive/6.jpg",
+        "/projects/exitfive/7.mp4"
       ],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/exitfive/5.jpg"],
+      "files": ["../../assets/projects/exitfive/6.jpg"],
       "breakpoints": ["sm"]
     },
     {
@@ -62,34 +76,20 @@
     },
     {
       "type": "media",
-      "files": ["/projects/exitfive/6.mp4"],
+      "files": ["/projects/exitfive/7.mp4"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
       "padding": "default",
-      "files": ["/projects/exitfive/7.mp4"]
+      "files": ["/projects/exitfive/8.mp4"]
     },
     {
       "type": "media",
       "padding": "default",
-      "files": ["/projects/exitfive/8.mp4", "/projects/exitfive/9.mp4"]
+      "files": ["/projects/exitfive/9.mp4", "/projects/exitfive/10.mp4"]
     },
-    { "type": "media", "files": ["../../assets/projects/exitfive/10.jpg"] },
-    {
-      "type": "media",
-      "padding": "default",
-      "files": ["../../assets/projects/exitfive/11.jpg"],
-      "breakpoints": ["md"],
-      "ribbon": "webflow"
-    },
-    {
-      "type": "media",
-      "padding": "default",
-      "files": ["../../assets/projects/exitfive/11-sm.jpg"],
-      "breakpoints": ["sm"],
-      "ribbon": "webflow"
-    },
+    { "type": "media", "files": ["../../assets/projects/exitfive/11.jpg"] },
     {
       "type": "text",
       "title": "Webflow Recognition",

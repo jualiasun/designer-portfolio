@@ -29,11 +29,31 @@
       "type": "media",
       "padding": "centered-sm",
       "files": ["../../assets/projects/war-belonging/2.jpg"],
-      "breakpoints": ["md"]
+      "breakpoints": ["md"],
+      "ribbon": "ukraine"
     },
     {
       "type": "media",
       "files": ["../../assets/projects/war-belonging/2.jpg"],
+      "breakpoints": ["sm"],
+      "ribbon": "ukraine"
+    },
+    {
+      "type": "text",
+      "title": "Home",
+      "text": "This illustration is about home – the feeling of being away from it, and the desire to return, while realising it will never be the same. The nostalgic side on the left represents my childhood memories, while the reality on the right was inspired by a recent trip to Kharkiv.\nThis illustration was featured on the official Ukrainian Instagram page – @ukraine.ua",
+      "variant": "dark",
+      "padding": "compact"
+    },
+    {
+      "type": "media",
+      "padding": "centered-sm",
+      "files": ["../../assets/projects/war-belonging/3.jpg"],
+      "breakpoints": ["md"]
+    },
+    {
+      "type": "media",
+      "files": ["../../assets/projects/war-belonging/3.jpg"],
       "breakpoints": ["sm"]
     },
     {
@@ -46,12 +66,12 @@
     {
       "type": "media",
       "padding": "centered-sm",
-      "files": ["../../assets/projects/war-belonging/3.jpg"],
+      "files": ["../../assets/projects/war-belonging/4.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/war-belonging/3.jpg"],
+      "files": ["../../assets/projects/war-belonging/4.jpg"],
       "breakpoints": ["sm"]
     },
     {
@@ -64,12 +84,12 @@
     {
       "type": "media",
       "padding": "centered-sm",
-      "files": ["../../assets/projects/war-belonging/4.jpg"],
+      "files": ["../../assets/projects/war-belonging/5.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/war-belonging/4.jpg"],
+      "files": ["../../assets/projects/war-belonging/5.jpg"],
       "breakpoints": ["sm"]
     },
     {
@@ -82,38 +102,18 @@
     {
       "type": "media",
       "padding": "centered-sm",
-      "files": ["../../assets/projects/war-belonging/5.jpg"],
+      "files": ["../../assets/projects/war-belonging/6.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/war-belonging/5.jpg"],
+      "files": ["../../assets/projects/war-belonging/6.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "text",
       "title": "144 Children",
       "text": "One of the topics that affected me deeply was the number of children killed by Russians. This illustration represents the lives of those children lost to the war. At that time, the number was 144.",
-      "variant": "dark",
-      "padding": "compact"
-    },
-    {
-      "type": "media",
-      "padding": "centered-sm",
-      "files": ["../../assets/projects/war-belonging/6.jpg"],
-      "breakpoints": ["md"],
-      "ribbon": "ukraine"
-    },
-    {
-      "type": "media",
-      "files": ["../../assets/projects/war-belonging/6.jpg"],
-      "breakpoints": ["sm"],
-      "ribbon": "ukraine"
-    },
-    {
-      "type": "text",
-      "title": "Home",
-      "text": "This illustration is about home – the feeling of being away from it, and the desire to return, while realising it will never be the same. The nostalgic side on the left represents my childhood memories, while the reality on the right was inspired by a recent trip to Kharkiv.\nThis illustration was featured on the official Ukrainian Instagram page – @ukraine.ua",
       "variant": "dark",
       "padding": "compact"
     },
