@@ -80,13 +80,15 @@
       "type": "media",
       "padding": "default",
       "files": ["../../assets/projects/exitfive/11.jpg"],
-      "breakpoints": ["md"]
+      "breakpoints": ["md"],
+      "ribbon": "webflow"
     },
     {
       "type": "media",
       "padding": "default",
       "files": ["../../assets/projects/exitfive/11-sm.jpg"],
-      "breakpoints": ["sm"]
+      "breakpoints": ["sm"],
+      "ribbon": "webflow"
     },
     {
       "type": "text",

@@ -101,12 +101,14 @@
       "type": "media",
       "padding": "centered-sm",
       "files": ["../../assets/projects/war-belonging/6.jpg"],
-      "breakpoints": ["md"]
+      "breakpoints": ["md"],
+      "ribbon": "ukraine"
     },
     {
       "type": "media",
       "files": ["../../assets/projects/war-belonging/6.jpg"],
-      "breakpoints": ["sm"]
+      "breakpoints": ["sm"],
+      "ribbon": "ukraine"
     },
     {
       "type": "text",

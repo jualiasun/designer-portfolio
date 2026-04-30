@@ -37,6 +37,7 @@ const projects = defineCollection({
               aspect: z.string().optional(),
               overlayImage: image().optional(),
               playWithSound: z.boolean().default(false),
+              ribbon: z.enum(['webflow', 'ukraine']).optional(),
             }),
             z.object({
               type: z.literal('text'),
