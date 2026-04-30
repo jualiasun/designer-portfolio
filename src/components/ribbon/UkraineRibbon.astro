@@ -2,15 +2,8 @@
 import { Image } from 'astro:assets'
 import Ribbon from './Ribbon.astro'
 import ukraineImg from '../../assets/ukraine.png'
-
-interface Props {
-  color?: string
-  class?: string
-}
-
-const { color = '#0057B8', class: className = '' } = Astro.props
 ---
 
-<Ribbon color={color} class={className}>
+<Ribbon color="#0057B8" text="@ukraine.ua">
   <Image src={ukraineImg} alt="Ukraine" class="w-[80%]" />
 </Ribbon>

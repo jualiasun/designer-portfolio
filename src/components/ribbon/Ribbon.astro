@@ -1,17 +1,35 @@
 ---
 interface Props {
   color?: string
-  class?: string
+  text?: string
 }
 
-const { color = '#ffffff', class: className = '' } = Astro.props
+const { color = '#ffffff', text } = Astro.props
 ---
 
-<div class:list={['overflow-hidden px-4 pb-4 -mx-4 -mb-4', className]}>
-  <div class:list={['group w-9 md:w-12 lg:w-16 xl:w-21']}>
+<div class="group relative w-9 md:w-12 lg:w-16 xl:w-21" data-ribbon>
+  {
+    text && (
+      <span
+        role="tooltip"
+        data-ribbon-tooltip
+        class:list={[
+          'pointer-events-none fixed top-0 left-0 z-50',
+          'whitespace-nowrap rounded-md bg-deep-black/60 px-3 py-1.5',
+          'text-white text-sm sm:text-base lg:text-lg leading-none',
+          'opacity-0 group-hover:opacity-100 group-data-[pressed=true]:opacity-100',
+          'transition-opacity duration-200',
+        ]}
+      >
+        Featured on {text}
+      </span>
+    )
+  }
+  <div class="overflow-hidden px-4 pb-4 -mx-4 -mb-4">
     <div
       class:list={[
-        '-translate-y-1/5 group-hover:translate-y-0 transition-transform duration-300 relative',
+        '-translate-y-1/5 transition-transform duration-300 relative',
+        'group-hover:translate-y-0 group-data-[pressed=true]:translate-y-0',
       ]}
     >
       <svg
@@ -33,3 +51,79 @@ const { color = '#ffffff', class: className = '' } = Astro.props
     </div>
   </div>
 </div>
+
+<script>
+  const VIEWPORT_MARGIN = 8
+  const TOOLTIP_GAP = 8
+
+  const ribbons = document.querySelectorAll<HTMLElement>('[data-ribbon]')
+
+  const positionTooltip = (ribbon: HTMLElement) => {
+    const tooltip = ribbon.querySelector<HTMLElement>('[data-ribbon-tooltip]')
+    if (!tooltip) return
+
+    const ribbonRect = ribbon.getBoundingClientRect()
+    const tooltipRect = tooltip.getBoundingClientRect()
+
+    let left = ribbonRect.left + ribbonRect.width / 2 - tooltipRect.width / 2
+    const maxLeft = window.innerWidth - tooltipRect.width - VIEWPORT_MARGIN
+    const minLeft = VIEWPORT_MARGIN
+    if (left > maxLeft) left = maxLeft
+    if (left < minLeft) left = minLeft
+
+    const top = ribbonRect.top - tooltipRect.height - TOOLTIP_GAP
+
+    tooltip.style.transform = `translate(${Math.round(left)}px, ${Math.round(top)}px)`
+  }
+
+  const isVisible = (ribbon: HTMLElement) =>
+    ribbon.matches(':hover') || ribbon.dataset.pressed === 'true'
+
+  ribbons.forEach((ribbon) => {
+    let timeoutId: number | undefined
+
+    const press = () => {
+      window.clearTimeout(timeoutId)
+      ribbon.dataset.pressed = 'true'
+      positionTooltip(ribbon)
+    }
+
+    const release = (delay = 0) => {
+      window.clearTimeout(timeoutId)
+      timeoutId = window.setTimeout(() => {
+        delete ribbon.dataset.pressed
+      }, delay)
+    }
+
+    ribbon.addEventListener('mouseenter', () => positionTooltip(ribbon))
+    ribbon.addEventListener('focusin', () => positionTooltip(ribbon))
+
+    ribbon.addEventListener(
+      'touchstart',
+      () => {
+        press()
+      },
+      { passive: true },
+    )
+
+    ribbon.addEventListener('touchend', () => release(2000))
+    ribbon.addEventListener('touchcancel', () => release(0))
+  })
+
+  document.addEventListener('touchstart', (event) => {
+    ribbons.forEach((ribbon) => {
+      if (!ribbon.contains(event.target as Node)) {
+        delete ribbon.dataset.pressed
+      }
+    })
+  })
+
+  const reflowVisible = () => {
+    ribbons.forEach((ribbon) => {
+      if (isVisible(ribbon)) positionTooltip(ribbon)
+    })
+  }
+
+  window.addEventListener('resize', reflowVisible)
+  window.addEventListener('scroll', reflowVisible, { passive: true })
+</script>

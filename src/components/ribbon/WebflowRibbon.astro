@@ -2,15 +2,8 @@
 import { Image } from 'astro:assets'
 import Ribbon from './Ribbon.astro'
 import webflowLogo from '../../assets/webflow-logo.svg'
-
-interface Props {
-  color?: string
-  class?: string
-}
-
-const { color = '#FFF', class: className = '' } = Astro.props
 ---
 
-<Ribbon color={color} class={className}>
+<Ribbon color="#FFF" text="@webflow">
   <Image src={webflowLogo} alt="Webflow" class="w-[55%]" />
 </Ribbon>
