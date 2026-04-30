@@ -28,25 +28,21 @@ const { color = '#ffffff', text } = Astro.props
   <div class="overflow-hidden px-4 pb-4 -mx-4 -mb-4">
     <div
       class:list={[
-        '-translate-y-1/5 transition-transform duration-300 relative',
+        '-translate-y-1/5 transition-transform duration-300',
         'group-hover:translate-y-0 group-data-[pressed=true]:translate-y-0',
+        'drop-shadow-[1.714px_1.714px_1.714px_rgba(0,0,0,0.10)]',
+        'md:drop-shadow-[4px_4px_4px_rgba(0,0,0,0.10)]',
       ]}
     >
-      <svg
-        class:list={[
-          'w-full',
-          'drop-shadow-[1.714px_1.714px_1.714px_rgba(0,0,0,0.10)]',
-          'md:drop-shadow-[4px_4px_4px_rgba(0,0,0,0.10)]',
-        ]}
-        viewBox="0 0 82 160"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M0 0H82V160L43 132L0 160V0Z" fill={color}></path>
-      </svg>
       <div
-        class="absolute inset-x-0 top-[60%] -translate-y-1/2 flex justify-center"
+        class="relative w-full aspect-82/160"
+        style={`background-color:${color};clip-path:polygon(0 0,100% 0,100% 100%,52.44% 82.5%,0 100%)`}
       >
-        <slot />
+        <div
+          class="absolute inset-x-0 top-[60%] -translate-y-1/2 flex justify-center"
+        >
+          <slot />
+        </div>
       </div>
     </div>
   </div>
