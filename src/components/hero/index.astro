@@ -3,6 +3,8 @@ import { Image } from 'astro:assets'
 import avatar from '../../assets/intro/avatar.png'
 import arrowDown from '../../assets/intro/arrow.svg'
 import HeroText from './HeroText.astro'
+import UkraineRibbon from '../ribbon/UkraineRibbon.astro'
+import WebflowRibbon from '../ribbon/WebflowRibbon.astro'
 ---
 
 <section
@@ -52,7 +54,12 @@ import HeroText from './HeroText.astro'
         <Image src={arrowDown} alt="Down" />
       </a>
     </div>
-    <div class="sm:hidden bg-paper-white px-4 pb-6 pt-10">
+
+    <div class="sm:hidden bg-paper-white px-4 pb-6 pt-2">
+      <div class="relative -top-2 right-0 flex justify-end gap-x-5 sm:hidden">
+        <WebflowRibbon />
+        <UkraineRibbon />
+      </div>
       <HeroText />
     </div>
   </div>
