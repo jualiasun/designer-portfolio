@@ -6,9 +6,11 @@ interface Props {
 }
 
 const { href, variant = 'primary', className } = Astro.props
+const linkId = `footer-link-${Math.random().toString(36).slice(2)}`
 ---
 
 <a
+  id={linkId}
   class:list={[
     'block transition-colors text-xl md:text-xs lg:text-xl xl:text-[26px] h-11 md:h-8 lg:h-11 xl:h-14 content-center px-5 md:px-3 lg:px-5 rounded-xl md:rounded-lg lg:rounded-xl',
     variant === 'primary' &&
@@ -23,3 +25,15 @@ const { href, variant = 'primary', className } = Astro.props
 >
   <slot />
 </a>
+
+<script is:inline define:vars={{ linkId, linkHref: href }}>
+  var link = document.getElementById(linkId)
+  if (link) {
+    link.addEventListener('click', function() {
+      window.posthog?.capture('social_link_clicked', {
+        link_text: link.textContent?.trim(),
+        link_href: linkHref,
+      })
+    })
+  }
+</script>

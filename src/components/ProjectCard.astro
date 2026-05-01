@@ -48,6 +48,7 @@ const alignClasses: Record<Align, string> = {
 ---
 
 <a
+  id={`project-card-${id}`}
   href={`/${id}`}
   class:list={[
     'bg-white flex flex-col gap-4 lg:gap-5 overflow-hidden w-90 md:w-64 lg:w-90 xl:w-125 aspect-5/6 transition-transform duration-300 ease-out hover:scale-[1.03]',
@@ -56,6 +57,10 @@ const alignClasses: Record<Align, string> = {
     className,
   ]}
   data-speed={dataSpeed}
+  data-project-id={id}
+  data-project-title={title}
+  data-project-client={client}
+  data-project-category={category}
   {...rest}
 >
   <Image src={image} alt="" class="aspect-5/4 h-auto object-cover" />
@@ -81,3 +86,17 @@ const alignClasses: Record<Align, string> = {
     </p>
   </div>
 </a>
+
+<script is:inline define:vars={{ cardId: `project-card-${id}`, projectId: id, projectTitle: title, projectClient: client, projectCategory: category }}>
+  var card = document.getElementById(cardId)
+  if (card) {
+    card.addEventListener('click', function() {
+      window.posthog?.capture('project_card_clicked', {
+        project_id: projectId,
+        project_title: projectTitle,
+        project_client: projectClient,
+        project_category: projectCategory,
+      })
+    })
+  }
+</script>

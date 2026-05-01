@@ -61,6 +61,7 @@ import { externalLinks } from '../data/links'
     href={externalLinks.behance}
     target="_blank"
     rel="noopener noreferrer"
+    id="behance-cta"
     class:list={[
       'bg-deep-black text-bold-green hover:text-deep-black hover:bg-brave-red transition-colors',
       'content-center',
@@ -72,3 +73,9 @@ import { externalLinks } from '../data/links'
     View Work
   </a>
 </section>
+
+<script is:inline>
+  document.getElementById('behance-cta')?.addEventListener('click', function() {
+    window.posthog?.capture('behance_banner_clicked')
+  })
+</script>

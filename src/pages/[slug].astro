@@ -15,11 +15,23 @@ export async function getStaticPaths() {
 const { project } = Astro.props
 const isPasswordProtected = project.id === 'zoca'
 const zocaPassword = 'loremipsum'
+const projectId = project.id
+const projectTitle = project.data.preview.title
 ---
 
 <Layout title={project.data.preview.title} withTopPadding>
-  <script is:inline define:vars={{ isPasswordProtected, zocaPassword }}>
+  <script is:inline define:vars={{ isPasswordProtected, zocaPassword, projectId, projectTitle }}>
+    window.posthog?.capture('project_viewed', {
+      project_id: projectId,
+      project_title: projectTitle,
+    })
+
     if (isPasswordProtected) {
+      window.posthog?.capture('protected_project_access_attempted', {
+        project_id: projectId,
+        project_title: projectTitle,
+      })
+
       const password = window.prompt(
         'This project is not public just yet – password-protected until launch. Reach out on LinkedIn for access :)',
       )
@@ -27,6 +39,10 @@ const zocaPassword = 'loremipsum'
       if (password !== zocaPassword) {
         window.location.replace('/')
       } else {
+        window.posthog?.capture('protected_project_access_granted', {
+          project_id: projectId,
+          project_title: projectTitle,
+        })
         window.addEventListener('DOMContentLoaded', () => {
           document
             .querySelector('[data-protected-project]')
