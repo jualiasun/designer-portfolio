@@ -1,118 +1,118 @@
 {
   "preview": {
     "order": 2,
-    "image": "../../assets/projects/saashok/preview.jpg",
+    "image": "../../assets/projects/saashock/preview.jpg",
     "category": "visual identity",
-    "client": "Saashok",
+    "client": "Saashock",
     "title": "A conference for SaaS founders and leaders",
     "align": "right",
     "mt": "md:mt-51 lg:mt-[288px] xl:mt-[270px]",
     "speed": 0.1
   },
   "blocks": [
-    { "type": "media", "files": ["../../assets/projects/saashok/1.jpg"] },
+    { "type": "media", "files": ["../../assets/projects/saashock/1.jpg"] },
     {
       "type": "text",
       "title": "Project Overview",
-      "text": "SaaShok is a global community and events platform for the B2B SaaS industry. They needed a new brand identity to communicate their three main pillars: events, community, and education."
+      "text": "SaaShock is a global community and events platform for the B2B SaaS industry. They needed a new brand identity to communicate their three main pillars: events, community, and education."
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/2.jpg"],
+      "files": ["../../assets/projects/saashock/2.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
       "padding": "default",
       "files": [
-        "../../assets/projects/saashok/3.jpg",
-        "/projects/saashok/4.mp4"
+        "../../assets/projects/saashock/3.jpg",
+        "/projects/saashock/4.mp4"
       ],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/2-sm.jpg"],
+      "files": ["../../assets/projects/saashock/2-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/2-1-sm.jpg"],
+      "files": ["../../assets/projects/saashock/2-1-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/4-sm.jpg"],
+      "files": ["../../assets/projects/saashock/4-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
-      "files": ["/projects/saashok/4.mp4"],
+      "files": ["/projects/saashock/4.mp4"],
       "breakpoints": ["sm"]
     },
     {
       "type": "text",
       "title": "The Logotype",
-      "text": "The logo and all graphic elements are based on one question: how do we show SaaShok’s main value – connection? We created a special symbol called the \"Link.\" By connecting two unique parts, this shape became the main graphic element and the foundation of the brand.",
+      "text": "The logo and all graphic elements are based on one question: how do we show SaaShock's main value – connection? We created a special symbol called the \"Link.\" By connecting two unique parts, this shape became the main graphic element and the foundation of the brand.",
       "variant": "dark",
       "padding": "compact"
     },
     {
       "type": "media",
       "padding": "default",
-      "files": ["../../assets/projects/saashok/5.jpg"]
+      "files": ["../../assets/projects/saashock/5.jpg"]
     },
     {
       "type": "text",
       "title": "A Clean but Vibrant Look",
-      "text": "The challenge was to create a black-and-white brand that respects their history but also feels energetic. This is how we chose the color palette. When combined with the \"Link\" symbol, we can create many different shapes and frames to show the connections SaaShok helps build.",
+      "text": "The challenge was to create a black-and-white brand that respects their history but also feels energetic. This is how we chose the color palette. When combined with the \"Link\" symbol, we can create many different shapes and frames to show the connections SaaShock helps build.",
       "variant": "dark",
       "padding": "compact"
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/6.jpg"],
+      "files": ["../../assets/projects/saashock/6.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/7.jpg"],
+      "files": ["../../assets/projects/saashock/7.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/8.jpg"],
+      "files": ["../../assets/projects/saashock/8.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/9.jpg"],
+      "files": ["../../assets/projects/saashock/9.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/6-sm.jpg"],
+      "files": ["../../assets/projects/saashock/6-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/7-sm.jpg"],
+      "files": ["../../assets/projects/saashock/7-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/8-sm.jpg"],
+      "files": ["../../assets/projects/saashock/8-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/9-sm.jpg"],
+      "files": ["../../assets/projects/saashock/9-sm.jpg"],
       "breakpoints": ["sm"]
     },
     {
       "type": "media",
       "padding": "default",
-      "files": ["../../assets/projects/saashok/10.jpg"]
+      "files": ["../../assets/projects/saashock/10.jpg"]
     },
     {
       "type": "text",
@@ -125,25 +125,25 @@
       "type": "media",
       "padding": "default",
       "files": [
-        "../../assets/projects/saashok/11.jpg",
-        "../../assets/projects/saashok/12.jpg"
+        "../../assets/projects/saashock/11.jpg",
+        "../../assets/projects/saashock/12.jpg"
       ]
     },
     {
       "type": "media",
       "padding": { "inline": "60px", "block": "168px" },
-      "files": ["../../assets/projects/saashok/13.png"],
+      "files": ["../../assets/projects/saashock/13.png"],
       "breakpoints": ["md"]
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saashok/14.jpg"],
+      "files": ["../../assets/projects/saashock/14.jpg"],
       "breakpoints": ["md"]
     },
     {
       "type": "nbd-banner",
       "breakpoints": ["sm", "md"],
-      "projectName": "Visual Identity for Saashok",
+      "projectName": "Visual Identity for Saashock",
       "team": ["Creative Direction: Juan Pablo Lopez"]
     }
   ]
