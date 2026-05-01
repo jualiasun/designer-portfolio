@@ -1,7 +1,7 @@
 {
   "preview": {
     "order": 2,
-    "image": "../../assets/projects/saastock/preview.png",
+    "image": "../../assets/projects/saastock/preview.jpg",
     "category": "visual identity",
     "client": "Saastock",
     "title": "A conference for SaaS founders and leaders",
@@ -26,7 +26,7 @@
       "padding": "default",
       "files": [
         "../../assets/projects/saastock/3.jpg",
-        "../../assets/projects/saastock/4.jpg"
+        "/projects/saastock/4.mp4"
       ],
       "breakpoints": ["md"]
     },
@@ -47,7 +47,7 @@
     },
     {
       "type": "media",
-      "files": ["../../assets/projects/saastock/3-sm.jpg"],
+      "files": ["/projects/saastock/4.mp4"],
       "breakpoints": ["sm"]
     },
     {
